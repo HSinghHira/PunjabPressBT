@@ -1,26 +1,33 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		
-		<title>Punjab Press BT Documentation</title>
+		<title>Punjab Press BT</title>
+		<link rel="shortcut icon" href="assets/favicon.ico" />
 		
 		<!-- CORE CSS -->
 		<link href="./files/css/styles.css" rel="stylesheet">
+		<script>
+			var mydate=new Date()
+			var year=mydate.getYear()
+			if (year < 1000)
+			year+=1900
+		</script>  
 	</head>
 		
 		<body>
 		
-<div id="docs-info">
+		<div id="docs-info">
 			<h1>Punjab Press Theme Documentation</h1>
-			<h4>Designed & Developed by Harman Singh Hira</h4>
+			<h4>Designed &amp; Developed by Harman Singh Hira &copy; <script>document.write(year)</script></h4>
 			<div class="links">
-				<a href="http://punjabpresstemp.blogspot.in/" target="_blank">Check Demo</a>
-				<a href="./Punjab Press BT.zip">Download Free</a>
-				<a href="https://sellfy.com/p/vixZ/" target="_blank">Buy Full</a>
-				<a href="https://github.com/HSinghHira/PunjabPressBT/issues" target="_blank">Knowledgebase</a>
-				<a href="http://hsinghhira.blogspot.com/p/resume.html#contact" target="_blank">Contact us</a>
+				<a href="http://punjabpresstemp.blogspot.com/" target="_blank">View Theme Demo</a>
+				<a href="#download">Download Now</a>
+				<a href="https://github.com/HSinghHira/PunjabPressBT/issues" target="_blank">Discus Issues and Future</a>
+				<a href="http://hsinghhira.blogspot.com/p/profile.html#contact" target="_blank">Your Feedbacks</a>
 	
 			</div>
 </div>
@@ -31,12 +38,22 @@
 			<ul id="tab-nav">
 				<li><a href="#introduction">Introduction</a></li>
 				<li><a href="#changelog">Changelog</a></li>
+				<li><a href="#download">Download Now</a></li>
 				<li class="divider"><span></span></li>
 
 				<li><span>Getting Started</span></li>
 				<li><a href="#installation">Installation</a></li>
+				<li><a href="#layout">Layout Panel</a></li>
+				<li><a href="#mobile">Mobile Template</a></li>
 				<li><a href="#default-setting">Default Settings</a></li>
-				<li><a href="#layout">Layout</a></li>
+				<li><a href="#meta-tags">Edit Meta Tags</a></li>
+				<li class="divider"><span></span></li>
+
+				<li><span>Chat Configurations</span></li>
+				<li><a href="#chat">Turn On/Off Chat</a></li>
+				<li><a href="#chat2">Database Setup</a></li>
+				<li><a href="#chat3">Chat Header Text</a></li>
+				<li><a href="#chat4">Max Limit for Chat</a></li>
 				<li class="divider"><span></span></li>
 
 				<li><span>Basic Setup</span></li>
@@ -52,33 +69,39 @@
 				<li><a href="#vpw">Vertical Post Widget</a></li>
 				<li><a href="#mpw">Motion Post Widget</a></li>
 				<li><a href="#apw">Animated Post Widget</a></li>
-				<li><a href="#ad">Post's Advertisement</a></li>
+				<li><a href="#gpw">Gallery Post Widget</a></li>
+				<li><a href="#minislider">Mini Slider Post Widget</a></li>
+				<li class="divider"><span></span></li>
+
+				<li><span>More Widgets</span></li>
+				<li><a href="#recentcmt">Recent Comment</a></li>
+				<li><a href="#twitter">Twitter Widget</a></li>
 				<li class="divider"><span></span></li>
 
 				<li><span>Pages</span></li>
 				<li><a href="#errorpage">Error Page</a></li>
 				<li><a href="#archivepage">Archive Page</a></li>
 				<li><a href="#sitemappage">Sitemap Page</a></li>
+				<li><a href="#contactpage">Contact Page</a></li>
 				<li class="divider"><span></span></li>
 
 				<li><span>Customization</span></li>
-				<li><a href="#postsummery">Post Summery</a></li>
-				<li><a href="#viewmode">Post View Mode</a></li>
-				<li><a href="#loadmoreposts">Load more Posts</a></li>
-				<li><a href="#postdate">Post Date</a></li>
-				<li><a href="#pagenavi">Page Navigation</a></li>
-				<li><a href="#recentcmt">Recent Comment</a></li>
+				<li><a href="#postsummery">Post Settings</a></li>
 				<li><a href="#searchbox">JSON Search Result</a></li>
 				<li><a href="#emoticon">Emoticon</a></li>
 				<li><a href="#newsticker">News Ticker</a></li>
 				<li><a href="#relatedposts">Related Posts</a></li>
+				<li><a href="#authorbox">Author Box</a></li>
+				<li><a href="#ad">Post's Advertisement</a></li>
 				<li><a href="#customizer">Theme Customizer</a></li>
+				<li><a href="#globalconfig">Global Configurations</a></li>
+				<li><a href="#rtlwork">RTL Support</a></li>
 				<li class="divider"><span></span></li>
 
-				<li><span>How to Upload?</span></li>
-				<li><a href="#upload">Installing TortoiseSVN</a></li>
-				<li><a href="#upload2">Creating New Project</a></li>
-				<li><a href="#upload3">Start Uploading</a></li>
+
+				<li><span>Comment Setup</span></li>
+				<li><a href="#facebookcomment">Facebook Comment</a></li>
+				<li><a href="#disquscomment">Disqus Comment</a></li>
 				<li class="divider"><span></span></li>
 
 				<li><a href="#credits">Credits</a></li>
@@ -88,17 +111,18 @@
 			<!-- CONTENT -->
 			<div id="introduction">
 				<h2>Introduction</h2>
+				<img src='./files/more/main.png' width='100%;'/><br/><br/><br/>
 				<p>Thank you for using Punjab Press! We have spent a very long time developing this theme and the framework which it is built upon. We've done our very best to make it as expensive and feature-rich as possible, while also keeping it incredibly easy and slick to use. We've also worked hard to improve the ease of customisation, and have provided a Documentation reference for anyone who wishes to extend/modify & understand the theme and its Scripts. I'd be glad to help you if you have any questions relating to this theme. I'll do my best to assist you. If you have any more general question relating to this themes, you might consider visiting the forums and asking your question.</p>
 				<h3>Overview Guide</h3>
 				<table class="table table-bordered table-striped" style="float:left;width:48%;">
                                     			 <tbody>
 						<tr>
                                             					<td>Current Version</td>
-                                           					<td>v4.1</td>
+                                           					<td>v5.0</td>
                                         				</tr>
 						<tr>
                                             					<td>Doc Version</td>
-                                           					<td>v3.0</td>
+                                           					<td>v4.0</td>
                                         				</tr>
 						<tr>
                                             					<td>Created on</td>
@@ -106,7 +130,7 @@
                                         				</tr>
 						<tr>
                                             					<td>Modify on</td>
-                                           					<td>Mar. 14, 2015</td>
+                                           					<td>Jun. 16, 2015</td>
                                         				</tr>
 					</tbody>
 				</table>
@@ -114,11 +138,11 @@
                                       			<tbody>
 						<tr>
                                             					<td>Copyright</td>
-                                           					<td>Design Devta</td>
+                                           					<td><a href="http://designdevta.blogspot.com/" target="_blank">Design Devta</a> | <a href="http://www.blogershapes.com/" target="_blank">Blogger Shapes</a></td>
                                         				</tr>
 						<tr>
                                             					<td>Designer</td>
-                                           					<td><a href="http://hsinghhira.blogspot.com/" target="_blank">Harman Singh Hira</a></td>
+                                           					<td>Harman Singh Hira</td>
                                         				</tr>
 						<tr>
                                             					<td>Email</td>
@@ -126,18 +150,46 @@
                                         				</tr>
 						<tr>
                                             					<td>Website</td>
-                                           					<td><a href="http://www.designdevta.Blogspot.com/" target="_blank">www.DesignDevta.Blogspot.Com</a></td>
+                                           					<td><a href="http://hsinghhira.blogspot.com/" target="_blank">www.HSinghHira.Blospot.Com</a></td>
                                         				</tr>
 					</tbody>
 				</table>
 				<h3>Improvements</h3>
-				<p>We would happily welcome feedback from you on how, if anywhere, you would like this theme and documentation improved. If you would find anything a little bit easier and more helpful if we went into more detail, or explained something a little better - we'd be happy to hear it. We want Punjab Press to be the best theme on the market! If you have any comments, please mail us via the form on <a href="#">http://www.bebloggerist.com/contact-us/</a>.</p>
+				<p>We would happily welcome feedback from you on how, if anywhere, you would like this theme and documentation improved. If you would find anything a little bit easier and more helpful if we went into more detail, or explained something a little better - we'd be happy to hear it. We want Punjab Press to be the best theme on the market! If you have any comments, please mail us via the form on <a href="http://j.mp/HSinghHira_Contact">http://J.mP/HSinghHira_Contact</a>.</p>
 			</div>
 			<div id="changelog">
 				<h2>Changelog</h2>
 				<p>Here you can find the changelog for updates to Punjab Press. We will provide a full list of the changes made, be it additions, improvements, or bug fixes. If you need any more details for an update, then please log a topic in Forums.</p>
 
-				<h3>Version 4.1</h3>
+				<h3>Version 5.0</h3>
+					<ul>
+						<li>Added Gallery Post Widget</li>
+						<li>Added Mini Post Slider Widget</li>
+						<li>Added Custom Twitter Widget</li>
+						<li>Added Chat Bar System</li>
+						<li>Added RTL Support</li>
+						<li>Added Change Post Font Size Button</li>
+						<li>Added Print and Email Button</li>
+						<li>Added Search in Post Tool</li>
+						<li>Added Blogger, Facebook and Discuss Comment System</li>
+						<li>Added Author Bio Box</li>
+						<li>Added Awesome Fonts Work</li>
+						<li>Added Compatibility with New Blogger Updated Code System</li>
+						<li>Added Contact Page</li>
+						<li>Added Wikipedia Search Box Compatibility</li>
+						<li>Added Background Chane with Template Deigner</li>
+						<li>Fixed Some SEO Bugs</li>
+						<li>Changed One Label Style</li>
+						<li>Changed Simple Post Widgets to Animated Widgets</li>
+						<li>Changed Simple Sharing Buttons to Addthis Share Buttons</li>
+						<li>Improved and ChangedMain Slider</li>
+						<li>Improved and Stylish Layout Admin Panel</li>
+						<li>Improved and Changed Related Post Widget</li>
+						<li>Improved Customization</li>
+						<li>Improved Documentation</li>
+					</ul>
+
+				<h3>Version 4.2</h3>
 					<ul>
 						<li>Fixed Social SEO Problem</li>
 						<li>Improved Documentation</li>
@@ -147,6 +199,7 @@
 					<ul>
 						<li>Added 50+ Meta tags</li>
 						<li>Added Sitemap page</li>
+						<li>Added Gallery Post Widget</li>
 						<li>Added Animated Post Widget</li>
 						<li>Added One more label Style</li>
 						<li>Added News Ticker again</li>
@@ -228,17 +281,17 @@
 				<img src='./files/more/Upload.png' width='100%;'/>
 			</div>
 			<div id="default-setting">
-				<h2>Dafault Settings</h2>
-				<p>After installing the theme, this it the minimun setting to make all widget works fine in this themes.</p>
+				<h2>Default Settings</h2>
+				<p>After installing the theme, this it the minimum setting to make all widget works fine in this themes.</p>
 				<h3>Embedded Comment</h3>
-					<p>This to make comment area like the Demo and make Emoticon show</p>				
+					<p>This to make comment area like the Demo and make Emotion show</p>				
 					<ol>
 						<li>On Blogger Dashboard Click <strong class="setting">Settings</strong></li>
 						<li>Click <strong class="orange">Posts and Comments</strong>.</li>
 						<li>in Comment Location Choose <strong class="buttonx">Embedded</strong></li>						
 						<li><strong class="buttonorg">Save settings</strong></li>	
 					</ol>				
-						<img src='./files/more/comment settings.png' width=100%;'/>
+						<img src='./files/more/comment settings.png' width='100%;'/>
 
 				<h3>Blog Feed</h3>
 					<p>This to make recent comment, Search Result, Featured Post, and Post by Label work fine</p>				
@@ -248,40 +301,159 @@
 						<li>in Site Feed <i class=" icon-chevron-right"></i> Allow Blog Feed Choose <strong class="buttonx">Full</strong> Or <strong class="buttonx">Short</strong> </li>						
 						<li><strong class="buttonorg">Save settings</strong></li>	
 					</ol>				
-						<img src='./files/more/Blog Feed.png' width=100%;'/>
+						<img src='./files/more/Blog Feed.png' width='100%;'/>
+
+				<h3>Blog Description</h3>
+					<p>This is to make your Blog for better SEO.</p>				
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="setting">Settings</strong></li>
+						<li>Click <strong class="orange">Search preferences</strong>.</li>
+						<li>Enable Search Description</li>
+						<li>Write Suitable Search Description for your Blog</li>
+						<li><strong class="buttonorg">Save changes</strong></li>	
+					</ol>				
+						<img src='./files/more/description.png' width='100%;'/>
+
 					<p class="note"><note-title>NOTE:</note-title><br/>
 						1. If yours post have image uploaded on blogspot you can choose <strong>SHORT</strong>. but if yours post just have image from third party image hosting you must choose <strong>Full</strong>.<br/>
 						2. Blogger feed must be not redirect to other feed site like Feedburner<br/>
-						3. Your's blog or website not Private<br/>
+						3. Yours blog or website not Private<br/>
+						4. Write Post Description also while write new post.
 					</p>				
 			</div>
-
 			<div id="layout">
-				<h2>Layout Explain</h2>
-					<ol>
-						<li>Right Header Widget Area (for Ad)</li>
-						<li>Auto Featured Post Area</li>
-						<li>Top Sidebar Area</li>
-						<li>Middle Tabbed Sidebar Area
-							<ul>
-								<li>Facebook Like Box</li>
-								<li>Twitter Widget</li>
-								<li>Google+ Widget</li>
-								</ul>		
-						</li>
-						<li>Bottom Sidebar Area</li>
-						<li>Label Post Widget Area</li>
-						<li>Footer Widget Area</li>
-						<li>Manual Featured Post Area (Works with Image Widget only)</li>
-					</ol>
-				<img src='./files/more/layout.png' width=100%;'/>
+				<h2>Layout Explain</h2>					
+				<img src='./files/more/layout.png' width='100%;'/>
 			</div>
-
+			<div id="mobile">
+				<h2>Set Mobile Template</h2>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
+						<li>Click on <strong class="buttonx"><i class=" icon-cog"></i></strong> for Mobile Template</li>										<li>Choose "Yes. Show mobile template on mobile devices. "</li>
+						<li>Select "Custom" Template for Mobile</li>
+						<li>Click <strong class="buttonorg">Save</strong></li>	
+					</ol>					
+				<img src='./files/more/mobile.png' width='100%;'/>
+			</div>
+			<div id="meta-tags">
+				<h2>Edit Meta Tags</h2>					
+				These are some Meta Tags that are important for Blog's SEO. Read below that how to edit them carefully. (Case Senstive)
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
+						<li>Click on <strong class="buttonx">Edit HTML</strong></li>										<li>Search for "&lt;!-- MORE TAGS (EDIT TAGS ACCORDING TO YOU)--&gt;"</li>
+						<li>Replace/Edit Meta Content according to you i.e. FB_ID with 100001475504777 (read below tables for more)</li>
+						<li>After Editing Click <strong class="buttonorg">Save Template</strong></li>	
+					</ol>
+				<h3>Some Important Meta Tags</h3>
+				<table class="table table-bordered table-striped">
+                                    			<thead>
+                                       				 <tr>
+                                            					<th>Property</th>
+                                            					<th>Description</th>
+                                       				 </tr>
+                                   			</thead>
+                                    			<tbody>
+						<tr>
+                                            					<td>FB_APP_ID</td>
+                                            					<td>Your Facebook App ID (Required if using Facebook Comment Box)</td>
+                                        				</tr>
+						<tr>
+                                            					<td>FB_ID</td>
+                                            					<td>Your Profile Numbric ID (Required if using Facebook Comment Box)</td>
+                                        				</tr>
+						<tr>
+                                            					<td>GOOGLE+_PROFILE_LINK</td>
+                                            					<td>Your Google Plus Profile Link</td>
+                                        				</tr>
+						<tr>
+                                            					<td>SITE_KEYWORDS</td>
+                                            					<td>Site Keywords for your Blog i.e. If Blog is about Blogging then Keywords is Blogging (Seprated by Commas)</td>
+                                        				</tr>
+						<tr>
+                                            					<td>YOUR_NAME</td>
+                                            					<td>Replace with Blog's Author Name</td>
+                                        				</tr>
+						<tr>
+                                            					<td>TWITTER_USERNMAE</td>
+                                            					<td>Your Twitter Username</td>
+                                        				</tr>
+						<tr>
+                                            					<td>USERNAME</td>
+                                            					<td>Your Facebook Page or Profile Username</td>
+                                        				</tr>
+						<tr>
+                                            					<td>AUTHOR_NAME</td>
+                                            					<td>Replace with Blog's Author Name</td>
+                                        				</tr>                                       				                  
+                                    			</tbody>
+                                		</table>
+				<h3>Verificational Tags</h3>
+				<p>Use them if you verifing Blog for Search Engine, etc. Not Important.</p>
+			</div>
+			<div id="chat">
+				<h2>Chat Configurations</h2>	
+				<h3>Chat Turn On/Off</h3>
+					<p>This is to make Chat turn On or Off for your Blog.</p>				
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>Click on <strong class="orange">Chat ON/OFF</strong> Widget below Chat Configrations</li>
+						<li>Type "chat" in widget content box without quote in small letters (Case Senstive)</li>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>	
+					</ol>				
+				<img src='./files/more/chat.png' width='100%;'/>
+			</div>
+			<div id="chat2">
+				<h2>Database Setup (For Buyers Only)</h2>
+				<p>This is the main setup where all chat conversation is stored for every Punjab Press user</p>
+				<h3>Use Public Database</h3>
+				<p>If you want to use public Database instead of creating or using your own then read below:</p>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>Click on <strong class="orange">DATABASE</strong> Widget below Chat Configrations</li>
+						<li>Type "punjabpressbt" in widget content box without quote in small letters (Case Senstive)</li>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>	
+					</ol>
+				<h3>Your Own Database</h3>
+				<p>If you want to create your own database then read below steps carefully:</p>
+					<ol>
+						<li>Go to <a href='https://www.firebase.com/' target="_blank" class='newtab'>Firebase.com</a> and create an free account.</li>
+						<li>Then Setup your first App.</li>
+						<li>Enter app name and App URL Name but make sure your App URL Name is your Database</li>
+						<center><img src='./files/more/database.png'/></center>
+						<li>Then click on Create New App.</li>
+						<li>Done.</li>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>Click on <strong class="orange">DATABASE</strong> Widget below Chat Configrations</li>
+						<li>Type your App URL Name as Database in widget content box without quote in small letters (Case Senstive)</li>
+						<center><img src='./files/more/database2.png'/></center>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>	
+					</ol>
+			</div>
+			<div id='chat3'>
+				<h2>Chat Header Text (For Buyers Only)</h2>
+				<p>This is required for all buyers to choose their own Header Text.</p>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>Click on <strong class="orange">HEADER TEXT</strong> Widget below Chat Configrations</li>
+						<li>Type your own text i.e. Chat here..., etc in widget content box without quote in small letters (Case Senstive)</li>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>	
+					</ol>
+			</div>
+			<div id='chat4'>
+				<h2>Chat Max Limit (For Buyers Only)</h2>
+				<p>This is required for all buyers to choose their own Chat Limit.</p>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>Click on <strong class="orange">HEADER TEXT</strong> Widget below Chat Configrations</li>
+						<li>Type your own chat limit i.e. 15, 20, etc in widget content box without quote in small letters (Case Senstive)</li>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>	
+					</ol>
+			</div>
 			<div id="menu">
 				<h2>Navigation Setup</h2>
-				<img src='./files/more/Menu1.png' width=100%;'/>
+				<img src='./files/more/Menu1.png' width='100%;'/>
 				<center>Main Menu</center><br/><br/>
-				<img src='./files/more/Menu2.png' width=100%;'/>
+				<img src='./files/more/Menu2.png' width='100%;'/>
 				<center>Top Menu</center><br/><br/>
 				<p>To Edit Menu in this theme you can follow this step:</p>
 					<ol>
@@ -300,9 +472,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;Menu&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</code>
-
-						<li>Change # with yours URL link</li>
+&lt;/ul&gt;</code>						<li>Change # with yours URL link</li>
 						<li>Middle Menu Scroll down and Find this Code :</li>
 							<code>&lt;ul class=&#39;sf-menu&#39; id=&#39;menunav&#39;&gt;
   &lt;li&gt;&lt;a class=&#39;home&#39; expr:href=&#39;data:blog.homepageUrl&#39;&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -329,7 +499,6 @@
 					</ol>
 
 			</div>
-
 			<div id="socialicon">
 				<h2>Top Social Icon</h2>
 				<img src='./files/more/Top Social Icon.png'/><br/><br/>
@@ -350,7 +519,6 @@
 						<li>Change # with yours Social URL link</li>
 					</ol>
 			</div>
-
 			<div id="date">
 				<h2>Date Settings</h2>
 				<img src='./files/more/Date.png'/><br/><br/>
@@ -367,7 +535,6 @@ months:[&quot;January&quot;,&quot;February&quot;,&quot;March&quot;,&quot;April&q
 						<li>Change Month Name in new script with yours language.</li>
 					</ol>	
 			</div>
-
 			<div id="afs">
 				<h2>Auto Featured Slider</h2>
 				<center><img src='./files/more/Auto Featured Slider.png'/></center><br/><br/>
@@ -393,21 +560,16 @@ MaxPost:5
 &lt;script type=&#39;text/javascript&#39;&gt;
 jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).AutofeaturedPost({
 blogURL: &quot;&quot;,
-MaxPost: 4,		
-ImageSize: 500,
-Summarylength: 150,
-slideSpeed:5000,
+MaxPost: 5,		
+ImageSize: 600,
 ShowDate: true,
 ShowComment: true,
-animation:&quot;slide&quot;,
-NoCommentText: &quot;No Comment&quot;,
-OneCommentText: &quot;Comment&quot;,
-CommentText: &quot;Comments&quot;,
-RandompostActive: true,
-MonthNames: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
-pBlank: &quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;,
+pagination: true,
+thumbnails: true,
+loader:&quot;pie&quot;,
+height:&quot;50%&quot;,
+Random: true,
 tagName: false
-});
 });
 &lt;/script&gt;</code><br/><br/>
 				Default javascript mean if you just insert code like this:
@@ -433,73 +595,52 @@ tagName: &quot;Movies&quot;
                                             					<th>Description</th>
                                        				 </tr>
                                    			</thead>
-                                    			<tbody>
+                				<tbody>
+                    					<tr>
+                        						<td>blogURL</td>
+                       						 <td>Yours blog URL or you can leave it blank to load where this script load.</td>
+                    					</tr>
+                    					<tr>
+                        						<td>MaxPost</td>
+                        						<td>Maximum number artikel will show on Featured Post</td>
+                    					</tr>
+                    					<tr>
+                        						<td>ImageSize</td>
+                        						<td>Post Image size (in pixel)</td>
+                    					</tr>
+                    					<tr>
+                        						<td>ShowDate</td>
+                        						<td>If you want to show post date (true or false)</td>
+                    					</tr>	
 						<tr>
-                                            					<td>blogURL</td>
-                                            					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MaxPost</td>
-                                           					 <td>Maximum number artikel will show on Featured Post</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>Summarylength</td>
-                                            					<td>Number of summary characters to show.</td>
-                                        				</tr>
-                                        				<tr>
-                                           					<td>slideSpeed</td>
-                                            					<td>Set the speed of the slideshow cycling, in milliseconds</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>ImageSize</td>
-                                            					<td>Post Image size (in pixel)</td>
-                                        				</tr>
-						<tr>
-                                           					<td>ShowDate</td>
-                                            					<td>If you want to show post date (true or false)</td>
-                                        				</tr>
-						<tr>
-                                            					<td>ShowComment</td>
-                                            					<td>If you want to show Comment number (true or false)</td>
-                                        				</tr>
-						<tr>
-                                            					<td>animation</td>
-                                            					<td>Select your animation type, "fade" or "slide"</td>
-                                       				</tr>
-						<tr>
-                                            					<td>NoCommentText</td>
-                                            					<td>Text if your post don't have comment</td>
-                                       				</tr>
-						<tr>
-                                            					<td>OneCommentText</td>
-                                            					<td>Text if your post have one comment</td>
-                                        				</tr>
-						<tr>
-                                            					<td>CommentText</td>
-                                            					<td>Text if your post have more than one comment</td>
-                                        				</tr>
-                                       				<tr>
-                                            					<td>RandompostActive</td>
-                                            					<td>default <i>true</i>. It's will show article ramdomly. If want to show Recent Post just change to <i>false</i> </td>
-                                        				</tr>                                        
-                                        				<tr>
-                                           					<td>pBlank</td>
-                                            					<td>Backup image if post don't have image store on blogspot or picasa web</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MonthNames</td>
-                                            					<td>Format months name</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>tagName</td>
-                                            					<td>If you want to show Featured Post by the Label. Example: to show featured post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i></td>
-                                        				</tr>                                      
-                                    			</tbody>
-                                		</table> 
-
-
-
-			</div>
+                        						<td>ShowComment</td>
+                        						<td>If you want to show Comment number (true or false)</td>
+                    					</tr>
+                    					<tr>
+                        						<td>pagination</td>
+                        						<td>If you want to show slideshow pagination</td>
+                    					</tr>
+                    					<tr>
+                        						<td>thumbnails</td>
+                        						<td>If you want to show slideshow Thumbnails</td>
+                    					</tr>
+                    					<tr>
+                        						<td>loader</td>
+                        						<td>kind of loader style : "pie", "bar", "none"</td>
+                    					</tr>
+                    					<tr>
+                        						<td>height</td>
+                        						<td>Slideshow height : "50%" mean if will resize 50% from slideshow with if you want make it fix to 300px just change with "300px"</td>
+                    					</tr>
+                    					<tr>
+                        						<td>Random</td>
+                        						<td>default <i>true</i>. It's will show article ramdomly. If want to show Recent Post just change to <i>false</i></td>
+                   					 </tr>
+                    					<tr>
+                        						<td>tagName</td>
+                        						<td>If you want to show Featured Post by the Label. Example: to show featured post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i> </td>
+                   					 </tr>
+                				</tbody>                                		</table> 			</div>
 			<div id="mss">
 				<h2>Manual Slide Show (Using Image Widget)</h2>
 				<center><img src='./files/more/Manual Slide Show.png'/></center><br/><br/>
@@ -536,8 +677,10 @@ tagName: &quot;Movies&quot;
 							<code>manualfeaturedPost();</code>
 						<li>Replcae above Script with this Script:</li>
 							<code>manualfeaturedPost({
-slideSpeed:5000,
-animation:&quot;slide&quot;
+height:&quot;50%&quot;,
+loader:&quot;pie&quot;,
+pagination:true,
+thumbnails:true
 });</code>
 						<li>Then Click <strong class="buttonorg">Save Template</strong></li>
 					</ol>
@@ -549,20 +692,24 @@ animation:&quot;slide&quot;
                                             					<th>Description</th>
                                         				</tr>
                                     			</thead>
-                                   			<tbody>
-						<tr>
-                                            					<td>slideSpeed</td>
-                                            					<td>Set the speed of the slideshow cycling, in millisecond</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MaxPost</td>
-                                            					<td>Select your animation type, "fade" or "slide"</td>
-                                        				</tr>	
- 					</tbody>
-                                		</table> 
-
-			</div>
-
+					<tbody>
+                           					 <tr>
+                               						 <td>pagination</td>
+                             						 <td>If you want to show slideshow pagination</td>
+                            					</tr>
+                            					<tr>
+                                					<td>thumbnails</td>
+                                					<td>If you want to show slideshow Thumbnails</td>
+                            					</tr>
+                            					<tr>
+                                					<td>loader</td>
+                                					<td>kind of loader style : "pie", "bar", "none"</td>
+                            					</tr>
+                            					<tr>
+                                					<td>height</td>
+                                					<td>Slideshow height : "50%" mean if will resize 50% from slideshow with if you want make it fix to 300px just change with "300px"</td>
+                            					</tr>
+                        				</tbody>                                		</table> 			</div>
 			<div id="hpw">
 					<h2>Horizontal Post Widget</h2>
 						<center><img src="./files/more/Horizontal Post Widget.png"/></center>
@@ -576,48 +723,35 @@ animation:&quot;slide&quot;
 						<li>Copy Code from left Side:</li>
 						<li>Then Click <strong class="buttonorg">Save</strong></li>
 					</ol>
-				<code  style="float:right;width:350px;">&lt;div id=&quot;webpost&quot;&gt;&lt;/div&gt;
+				<code  style="float:right;width:350px;">&lt;div id=&quot;horizontalpost2&quot;&gt;&lt;/div&gt;
 &lt;script type=&#39;text/javascript&#39;&gt;
-jQuery(&quot;#webpost&quot;).RecentPostbyTag({
-MaxPost:6,
-FirstImageSize:&quot;s220-p&quot;,
-ImageSize:&quot;s80-p&quot;,
-tagName:&quot;Web Design&quot;,
+jQuery(&quot;#horizontalpost2&quot;).RecentPostbyTag({
+MaxPost:7,
+tagName:&quot;Your_TagName&quot;,
 postType: &quot;h&quot;,
-MoreText: &quot;View All About&quot;,
-AjaxLoad: true,
-MoreNumPost: 6
+animated:true
 });
 &lt;/script&gt;</code>			
 
 					</div>
-					<p class="note">
-						In <strong>tagName</strong> is name of the Post Label that will show. on this sample is <strong>"Sports"</strong> mean will display artikel from <strong>Sports</strong> label.<br/>						
-						If you are use Page Navigation, MoreNumPost must be same with postperpage number in pageNavi script.
-if AjaxLoad false page will redirect to More Post page
-					</p>
-
 					<h3>Advanced Setup</h3>
 					Complete Javascript to call Horizontal Post Widget like this code:
-					<code>jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).RecentPostbyTag({
+					<code>&lt;div id=&quot;ID_Place_To_Load_Plugin&quot;&gt;&lt;/div&gt;
+&lt;script type=&#39;text/javascript&#39;&gt;
+jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).RecentPostbyTag({
 blogURL: &quot;&quot;,
-MaxPost: 5,
-FirstImageSize: &quot;s220-p&quot;,
-ImageSize: &quot;s80-p&quot;,
 ShowDesc: false,
 ShowDate: true,
 ShowComment: true,
 Random: false,
-Summarylength: 100,	
-MoreText: &quot;View All About&quot;,
-LoadMoreText: &quot;Load More Post&quot;,
-MoreNumPost: 6,
 AjaxLoad: true,
-postType: &quot;v&quot;,			
-pBlank: &quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;,
-MonthNames: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
+animation:&quot;slide&quot;,
+postType: &quot;h&quot;,	
+animated: false,
+sliderType: &quot;c&quot;,		
 tagName: false
-});</code>
+});
+&lt;/script&gt;</code>
 				<h3>How to use Codes?</h3>
 
 				<table class="table table-bordered table-striped">
@@ -628,136 +762,94 @@ tagName: false
                                         				</tr>
                                     			</thead>
                                     			<tbody>
+                        					<tr>
+                            						<td>blogURL</td>
+                            						<td>Yours blog URL or you can leave it blank to load where this script load.</td>
+                        					</tr>                       
+                        					<tr>
+                            						<td>ShowDesc</td>
+                            						<td>If you want to show or hide post description (work in vertical and horizontal) (true or false)</td>
+                        					</tr>
+                        					<tr>
+                            						<td>ShowDate</td>
+                            						<td>If you want to show or hide date <i>true</i> to show or <i>false</i> to hide</td>
+                        					</tr>
+                        					<tr>
+                            						<td>ShowComment</td>
+                            						<td>If you want to show or hide comment number <i>true</i> to show or <i>false</i> to hide</td>
+                        					</tr>
+                        					<tr>
+                            						<td>Random</td>
+                            						<td>If you want to generate random post <i>true</i> to random or <i>false</i> to recent. if you set true AjaxLoad will not work (same like AjaxLoad set false).</td>
+                        					</tr>                        
+                        					<tr>
+                            						<td>AjaxLoad</td>
+                            						<td>If you'r want More Button will load more from next page and add after last post. If you set false page will redirect if More Button clicked</td>
+                        					</tr>
+                        					<tr>
+                            						<td>postType</td>
+                            						<td>There are Three kind of PostType: "v" (vertical Post), "h" (horizontal Post) , "g1" (Gallery Post 1), "g2" (Gallery Post 2) and "s" (Slider Post)</td>
+                        					</tr> 
 						<tr>
-                                            					<td>blogURL</td>
-                                           					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MaxPost</td>
-                                            					<td>Maximum number of article will be show</td>
-                                        				</tr>
+                            						<td>animated</td>
+                            						<td>make it have animation effect (for Vertical and Horizontal Post)</td>
+                        					</tr>
 						<tr>
-                                            					<td>FirstImageSize</td>
-                                           					<td>Image Format use Picasa/Blogspot image format: <br>
-							To make square image (200x200) Image Format use like this "s200-c" or "s200-p". image will be crop to make it square.<br>
-							Blogspot Image format also look like this : "s200" (if image landscape width will 200px. If image Portrait height will 200px), "w200" (image width will 200px) or "h200" (image height will 200px)</td>
-                                        				</tr>
-						 <tr>
-                                            					<td>ImageSize</td>
-                                           					<td>Image Format use Picasa/Blogspot image format: <br>
-							To make square image (200x200) Image Format use like this "s200-c" or "s200-p". image will be crop to make it square.<br>
-							Blogspot Image format also look like this : "s200" (if image landscape width will 200px. If image Portrait height will 200px), "w200" (image width will 200px) or "h200" (image height will 200px)</td>
-                                       				</tr>
+                            						<td>sliderType</td>
+                            						<td>make it show carousel slide show or Slide show : "c" (Carousel Slider) or "f" (full Slideshow Slider)</td>
+                        					</tr>
 						<tr>
-                                            					<td>ShowDesc</td>
-                                            					<td>If you want to show or hide post description (work in vertical and horizontal) (true or false)</td>
-                                        				</tr>
+                            						<td>animation</td>
+                            						<td>Full Slideshow effect : "slide" or "fade"</td>
+                        					</tr>
 						<tr>
-                                            					<td>ShowDate</td>
-                                            					<td>If you want to show or hide date <i>true</i> to show or <i>false</i> to hide</td>
-                                        				</tr>
-						<tr>
-                                            					<td>ShowComment</td>
-                                            					<td>If you want to show or hide comment number <i>true</i> to show or <i>false</i> to hide</td>
-                                       				</tr>
-						<tr>
-                                            					<td>Random</td>
-                                            					<td>If you want to generate random post <i>true</i> to random or <i>false</i> to recent. if you set true AjaxLoad will not work (same like AjaxLoad set false).</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>Summarylength</td>
-                                            					<td>Number of summary characters to show.</td>
-                                        				</tr>
-                                       				<tr>
-                                            					<td>MoreText</td>
-                                            					<td>More Button Text (If post generate from label/tag)</td>
-                                        				</tr>
-						<tr>
-                                            					<td>LoadMoreText</td>
-                                           					<td>More Button Text (if post generate from recent post or tagName still false and AjaxLoad true)</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MoreNumPost</td>
-                                            					<td>Number post will show if page redirect (AjaxLoad set false) if you'r use pageNavi script this number must same with postperpage number</td>
-                                        				</tr>
-						<tr>
-                                            					<td>AjaxLoad</td>
-                                            					<td>If you'r want More Button will load more from next page and add after last post. If you set false page will redirect if More Button clicked</td>
-                                        				</tr>
-						<tr>
-                                            					<td>postType</td>
-                                            					<td>There are Three kind of PostType: "v" (vertical Post), "h" (horizontal Post) and "s" (Slider Post)</td>
-                                        				</tr>										
-                                        				<tr>
-                                            					<td>pBlank</td>
-                                            					<td>Backup image if post don't have image store on blogspot or picasa web</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MonthNames</td>
-                                            					<td>Format months name</td>
-                                        				</tr>
-                                        				<tr>
-                                           					<td>tagName</td>
-                                            					<td>If you want to show Post by the Label. Example: to show post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i></td>
-                                       				</tr>                                      
-                                    			</tbody>
-                                		</table> 
-
-			</div>
+                            						<td>tagName</td>
+                            						<td>If you want to show Post by the Label. Example: to show post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i>  </td>
+                        					</tr>
+                   			 </tbody>                                		
+				</table>
+ 			</div>
 			<div id="vpw">
 					<h2>Vertical Post Widget</h2>
 					<h3>Simple Setup</h3>
 				<div style="float:left;width:100%;">
-					<img src='./files/more/Vertical Post Widget.png'  style="float:left;width:290px;"/>
-					<ol style="float:right;width:380px;">
+					<img src='./files/more/Vertical Post Widget.png'  style="float:right;width:320px;"/>
+					<ol style="float:left;width:380px;">
 					<p>To Create Vertical Post Widget follow this step</p>
 						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
 						<li>On its Area Click <span class='addgadget'>Add a Gadeget</span></li>
 						<li>Choose <strong class="html">HTML/Javascript</strong> Widget</li>
 						<li>Copy this Code:</li>
-							<code>&lt;div id=&quot;musicpost&quot;&gt;&lt;/div&gt;
+							<code>&lt;div id=&quot;verticalpost1&quot;&gt;&lt;/div&gt;
 &lt;script type=&#39;text/javascript&#39;&gt;
-jQuery(&quot;#musicpost&quot;).RecentPostbyTag({
+jQuery(&quot;#verticalpost1&quot;).RecentPostbyTag({
 MaxPost:6,
-FirstImageSize:&quot;s220-p&quot;,
-ImageSize:&quot;s80-p&quot;,
-tagName:&quot;Music&quot;,
-postType: &quot;v&quot;,
-MoreText: &quot;View All About&quot;,
-AjaxLoad: true,
-MoreNumPost: 6
+tagName:&quot;Your_TagName&quot;,
+postType: &quot;v&quot;
 });
 &lt;/script&gt;</code>
 						<li>Then Click <strong class="buttonorg">Save</strong></li>
 					</ol>				
 					</div>
-					<p class="note">
-						In <strong>tagName</strong> is name of the Post Label that will show. on this sample is <strong>"Music"</strong> mean will display articals from <strong>Music</strong> label. <br/>
-						if you are use Page Navigation, MoreNumPost must be same with postperpage number in pageNavi script.<br/>
-						if AjaxLoad <strong>false</strong> page will redirect to More Post page
-
-					</p>
+					
 					<h3>Advanced Setup</h3>
-					Complete Javascript to call Vertical Post Widget like this code:
-					<code>jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).RecentPostbyTag({
+					Complete Javascript to call Horizontal Post Widget like this code:
+					<code>&lt;div id=&quot;ID_Place_To_Load_Plugin&quot;&gt;&lt;/div&gt;
+&lt;script type=&#39;text/javascript&#39;&gt;
+jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).RecentPostbyTag({
 blogURL: &quot;&quot;,
-MaxPost: 5,
-FirstImageSize: &quot;s220-p&quot;,
-ImageSize: &quot;s80-p&quot;,
 ShowDesc: false,
 ShowDate: true,
 ShowComment: true,
 Random: false,
-Summarylength: 100,	
-MoreText: &quot;View All About&quot;,
-LoadMoreText: &quot;Load More Post&quot;,
-MoreNumPost: 6,
 AjaxLoad: true,
-postType: &quot;v&quot;,			
-pBlank: &quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;,
-MonthNames: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
+animation:&quot;slide&quot;,
+postType: &quot;v&quot;,	
+animated: false,
+sliderType: &quot;c&quot;,		
 tagName: false
-});</code>
+});
+&lt;/script&gt;</code>
 				<h3>How to use Codes?</h3>
 
 				<table class="table table-bordered table-striped">
@@ -768,80 +860,52 @@ tagName: false
                                         				</tr>
                                     			</thead>
                                     			<tbody>
+                        					<tr>
+                            						<td>blogURL</td>
+                            						<td>Yours blog URL or you can leave it blank to load where this script load.</td>
+                        					</tr>                       
+                        					<tr>
+                            						<td>ShowDesc</td>
+                            						<td>If you want to show or hide post description (work in vertical and horizontal) (true or false)</td>
+                        					</tr>
+                        					<tr>
+                            						<td>ShowDate</td>
+                            						<td>If you want to show or hide date <i>true</i> to show or <i>false</i> to hide</td>
+                        					</tr>
+                        					<tr>
+                            						<td>ShowComment</td>
+                            						<td>If you want to show or hide comment number <i>true</i> to show or <i>false</i> to hide</td>
+                        					</tr>
+                        					<tr>
+                            						<td>Random</td>
+                            						<td>If you want to generate random post <i>true</i> to random or <i>false</i> to recent. if you set true AjaxLoad will not work (same like AjaxLoad set false).</td>
+                        					</tr>                        
+                        					<tr>
+                            						<td>AjaxLoad</td>
+                            						<td>If you'r want More Button will load more from next page and add after last post. If you set false page will redirect if More Button clicked</td>
+                        					</tr>
+                        					<tr>
+                            						<td>postType</td>
+                            						<td>There are Three kind of PostType: "v" (vertical Post), "h" (horizontal Post) , "g1" (Gallery Post 1), "g2" (Gallery Post 2) and "s" (Slider Post)</td>
+                        					</tr> 
 						<tr>
-                                            					<td>blogURL</td>
-                                           					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MaxPost</td>
-                                            					<td>Maximum number of article will be show</td>
-                                        				</tr>
+                            						<td>animated</td>
+                            						<td>make it have animation effect (for Vertical and Horizontal Post)</td>
+                        					</tr>
 						<tr>
-                                            					<td>FirstImageSize</td>
-                                           					<td>Image Format use Picasa/Blogspot image format: <br>
-							To make square image (200x200) Image Format use like this "s200-c" or "s200-p". image will be crop to make it square.<br>
-							Blogspot Image format also look like this : "s200" (if image landscape width will 200px. If image Portrait height will 200px), "w200" (image width will 200px) or "h200" (image height will 200px)</td>
-                                        				</tr>
-						 <tr>
-                                            					<td>ImageSize</td>
-                                           					<td>Image Format use Picasa/Blogspot image format: <br>
-							To make square image (200x200) Image Format use like this "s200-c" or "s200-p". image will be crop to make it square.<br>
-							Blogspot Image format also look like this : "s200" (if image landscape width will 200px. If image Portrait height will 200px), "w200" (image width will 200px) or "h200" (image height will 200px)</td>
-                                       				</tr>
+                            						<td>sliderType</td>
+                            						<td>make it show carousel slide show or Slide show : "c" (Carousel Slider) or "f" (full Slideshow Slider)</td>
+                        					</tr>
 						<tr>
-                                            					<td>ShowDesc</td>
-                                            					<td>If you want to show or hide post description (work in vertical and horizontal) (true or false)</td>
-                                        				</tr>
+                            						<td>animation</td>
+                            						<td>Full Slideshow effect : "slide" or "fade"</td>
+                        					</tr>
 						<tr>
-                                            					<td>ShowDate</td>
-                                            					<td>If you want to show or hide date <i>true</i> to show or <i>false</i> to hide</td>
-                                        				</tr>
-						<tr>
-                                            					<td>ShowComment</td>
-                                            					<td>If you want to show or hide comment number <i>true</i> to show or <i>false</i> to hide</td>
-                                       				</tr>
-						<tr>
-                                            					<td>Random</td>
-                                            					<td>If you want to generate random post <i>true</i> to random or <i>false</i> to recent. if you set true AjaxLoad will not work (same like AjaxLoad set false).</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>Summarylength</td>
-                                            					<td>Number of summary characters to show.</td>
-                                        				</tr>
-                                       				<tr>
-                                            					<td>MoreText</td>
-                                            					<td>More Button Text (If post generate from label/tag)</td>
-                                        				</tr>
-						<tr>
-                                            					<td>LoadMoreText</td>
-                                           					<td>More Button Text (if post generate from recent post or tagName still false and AjaxLoad true)</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MoreNumPost</td>
-                                            					<td>Number post will show if page redirect (AjaxLoad set false) if you'r use pageNavi script this number must same with postperpage number</td>
-                                        				</tr>
-						<tr>
-                                            					<td>AjaxLoad</td>
-                                            					<td>If you'r want More Button will load more from next page and add after last post. If you set false page will redirect if More Button clicked</td>
-                                        				</tr>
-						<tr>
-                                            					<td>postType</td>
-                                            					<td>There are Three kind of PostType: "v" (vertical Post), "h" (horizontal Post) and "s" (Slider Post)</td>
-                                        				</tr>										
-                                        				<tr>
-                                            					<td>pBlank</td>
-                                            					<td>Backup image if post don't have image store on blogspot or picasa web</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MonthNames</td>
-                                            					<td>Format months name</td>
-                                        				</tr>
-                                        				<tr>
-                                           					<td>tagName</td>
-                                            					<td>If you want to show Post by the Label. Example: to show post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i></td>
-                                       				</tr>                                      
-                                    			</tbody>
-                                		</table> 
+                            						<td>tagName</td>
+                            						<td>If you want to show Post by the Label. Example: to show post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i>  </td>
+                        					</tr>
+                   			 </tbody>                                		
+				</table>
 			</div>
 			<div id="mpw">
 					<h2>Motion Post Widget</h2>
@@ -853,42 +917,35 @@ tagName: false
 						<li>On its Area Click <span class='addgadget'>Add a Gadeget</span></li>
 						<li>Choose <strong class="html">HTML/Javascript</strong> Widget</li>
 						<li>Copy this Code:</li>
-							<code>&lt;div id=&quot;sportpost&quot;&gt;&lt;/div&gt;
+							<code>&lt;div id=&quot;carouselpost1&quot;&gt;&lt;/div&gt;
 &lt;script type=&#39;text/javascript&#39;&gt;
-jQuery(&quot;#sportpost&quot;).RecentPostbyTag({
+jQuery(&quot;#carouselpost1&quot;).RecentPostbyTag({
 MaxPost:9,
 ImageSize:&quot;s180-p&quot;,
 postType:&quot;s&quot;,
-tagName:&quot;Sports&quot;
+tagName:&quot;Your_TagName&quot;
 });
 &lt;/script&gt;</code>
 						<li>Then Click <strong class="buttonorg">Save</strong></li>
 					</ol>	
-					<p class="note">
-						In <strong>tagName</strong> is name of the Post Label that will show. on this sample is <strong>"Sports"</strong> mean will display articals from <strong>Sports</strong> label.
-
-					</p>
-					<h3>Advanced Setup</h3>
-					Complete Javascript to call Motion Post Widget like this code:
-					<code>jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).RecentPostbyTag({
+																				<h3>Advanced Setup</h3>
+					Complete Javascript to call Horizontal Post Widget like this code:
+					<code>&lt;div id=&quot;ID_Place_To_Load_Plugin&quot;&gt;&lt;/div&gt;
+&lt;script type=&#39;text/javascript&#39;&gt;
+jQuery(&quot;#ID_Place_To_Load_Plugin&quot;).RecentPostbyTag({
 blogURL: &quot;&quot;,
-MaxPost: 5,
-FirstImageSize: &quot;s220-p&quot;,
-ImageSize: &quot;s80-p&quot;,
 ShowDesc: false,
 ShowDate: true,
 ShowComment: true,
 Random: false,
-Summarylength: 100,	
-MoreText: &quot;View All About&quot;,
-LoadMoreText: &quot;Load More Post&quot;,
-MoreNumPost: 6,
 AjaxLoad: true,
-postType: &quot;v&quot;,			
-pBlank: &quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;,
-MonthNames: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
+animation:&quot;slide&quot;,
+postType: &quot;s&quot;,	
+animated: false,
+sliderType: &quot;c&quot;,		
 tagName: false
-});</code>
+});
+&lt;/script&gt;</code>
 				<h3>How to use Codes?</h3>
 
 				<table class="table table-bordered table-striped">
@@ -899,85 +956,57 @@ tagName: false
                                         				</tr>
                                     			</thead>
                                     			<tbody>
+                        					<tr>
+                            						<td>blogURL</td>
+                            						<td>Yours blog URL or you can leave it blank to load where this script load.</td>
+                        					</tr>                       
+                        					<tr>
+                            						<td>ShowDesc</td>
+                            						<td>If you want to show or hide post description (work in vertical and horizontal) (true or false)</td>
+                        					</tr>
+                        					<tr>
+                            						<td>ShowDate</td>
+                            						<td>If you want to show or hide date <i>true</i> to show or <i>false</i> to hide</td>
+                        					</tr>
+                        					<tr>
+                            						<td>ShowComment</td>
+                            						<td>If you want to show or hide comment number <i>true</i> to show or <i>false</i> to hide</td>
+                        					</tr>
+                        					<tr>
+                            						<td>Random</td>
+                            						<td>If you want to generate random post <i>true</i> to random or <i>false</i> to recent. if you set true AjaxLoad will not work (same like AjaxLoad set false).</td>
+                        					</tr>                        
+                        					<tr>
+                            						<td>AjaxLoad</td>
+                            						<td>If you'r want More Button will load more from next page and add after last post. If you set false page will redirect if More Button clicked</td>
+                        					</tr>
+                        					<tr>
+                            						<td>postType</td>
+                            						<td>There are Three kind of PostType: "v" (vertical Post), "h" (horizontal Post) , "g1" (Gallery Post 1), "g2" (Gallery Post 2) and "s" (Slider Post)</td>
+                        					</tr> 
 						<tr>
-                                            					<td>blogURL</td>
-                                           					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MaxPost</td>
-                                            					<td>Maximum number of article will be show</td>
-                                        				</tr>
+                            						<td>animated</td>
+                            						<td>make it have animation effect (for Vertical and Horizontal Post)</td>
+                        					</tr>
 						<tr>
-                                            					<td>FirstImageSize</td>
-                                           					<td>Image Format use Picasa/Blogspot image format: <br>
-							To make square image (200x200) Image Format use like this "s200-c" or "s200-p". image will be crop to make it square.<br>
-							Blogspot Image format also look like this : "s200" (if image landscape width will 200px. If image Portrait height will 200px), "w200" (image width will 200px) or "h200" (image height will 200px)</td>
-                                        				</tr>
-						 <tr>
-                                            					<td>ImageSize</td>
-                                           					<td>Image Format use Picasa/Blogspot image format: <br>
-							To make square image (200x200) Image Format use like this "s200-c" or "s200-p". image will be crop to make it square.<br>
-							Blogspot Image format also look like this : "s200" (if image landscape width will 200px. If image Portrait height will 200px), "w200" (image width will 200px) or "h200" (image height will 200px)</td>
-                                       				</tr>
+                            						<td>sliderType</td>
+                            						<td>make it show carousel slide show or Slide show : "c" (Carousel Slider) or "f" (full Slideshow Slider)</td>
+                        					</tr>
 						<tr>
-                                            					<td>ShowDesc</td>
-                                            					<td>If you want to show or hide post description (work in vertical and horizontal) (true or false)</td>
-                                        				</tr>
+                            						<td>animation</td>
+                            						<td>Full Slideshow effect : "slide" or "fade"</td>
+                        					</tr>
 						<tr>
-                                            					<td>ShowDate</td>
-                                            					<td>If you want to show or hide date <i>true</i> to show or <i>false</i> to hide</td>
-                                        				</tr>
-						<tr>
-                                            					<td>ShowComment</td>
-                                            					<td>If you want to show or hide comment number <i>true</i> to show or <i>false</i> to hide</td>
-                                       				</tr>
-						<tr>
-                                            					<td>Random</td>
-                                            					<td>If you want to generate random post <i>true</i> to random or <i>false</i> to recent. if you set true AjaxLoad will not work (same like AjaxLoad set false).</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>Summarylength</td>
-                                            					<td>Number of summary characters to show.</td>
-                                        				</tr>
-                                       				<tr>
-                                            					<td>MoreText</td>
-                                            					<td>More Button Text (If post generate from label/tag)</td>
-                                        				</tr>
-						<tr>
-                                            					<td>LoadMoreText</td>
-                                           					<td>More Button Text (if post generate from recent post or tagName still false and AjaxLoad true)</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MoreNumPost</td>
-                                            					<td>Number post will show if page redirect (AjaxLoad set false) if you'r use pageNavi script this number must same with postperpage number</td>
-                                        				</tr>
-						<tr>
-                                            					<td>AjaxLoad</td>
-                                            					<td>If you'r want More Button will load more from next page and add after last post. If you set false page will redirect if More Button clicked</td>
-                                        				</tr>
-						<tr>
-                                            					<td>postType</td>
-                                            					<td>There are Three kind of PostType: "v" (vertical Post), "h" (horizontal Post) and "s" (Slider Post)</td>
-                                        				</tr>										
-                                        				<tr>
-                                            					<td>pBlank</td>
-                                            					<td>Backup image if post don't have image store on blogspot or picasa web</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MonthNames</td>
-                                            					<td>Format months name</td>
-                                        				</tr>
-                                        				<tr>
-                                           					<td>tagName</td>
-                                            					<td>If you want to show Post by the Label. Example: to show post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i></td>
-                                       				</tr>                                      
-                                    			</tbody>
-                                		</table> 		
+                            						<td>tagName</td>
+                            						<td>If you want to show Post by the Label. Example: to show post from <i>Sports</i> Label just write like this <i>tagName:&quot;Sports&quot;</i>  </td>
+                        					</tr>
+                   			 </tbody>                                		
+				</table>
 			</div>
 			<div id="apw">
 					<h2>Animated Post Widget</h2>
 					<h3>Simple Setup</h3>
-					<p>To Create Vertical Post Widget follow this step</p>
+					<p>To Create Animated Post Widget follow this step</p>
 				<div style="float:left;width:100%;">
 					<ol style="float:left;width:410px;">
 						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
@@ -989,17 +1018,13 @@ tagName: false
 FeaturedPostSide({
 MaxPost:8,
 ImageSize:300,
-tagName:&quot;Cars&quot;
+tagName:&quot;Your_TagName&quot;
 });
 &lt;/script&gt;</code>
 						<li>Then Click <strong class="buttonorg">Save</strong></li>
 					</ol>
-					<img src='./files/more/Animated Post Widget.png'  style="float:right;width:270px;"/>
+					<img src='./files/more/Animated Post Widget.png'  style="float:right;width:280px;"/>
 				</div>
-					<p class="note">
-						In <strong>tagName</strong> is name of the Post Label that will show. on this sample is <strong>"Cars"</strong> mean will display articals from <strong>Cars</strong> label.
-
-					</p>
 					<h3>Advanced Setup</h3>
 					Complete Javascript to call Vertical Post Widget like this code:
 					<code>&lt;div id=&quot;featuredpostside&quot;&gt;&lt;/div&gt;
@@ -1061,7 +1086,113 @@ tagName:false
                                     			</tbody>
 				</table>
 			</div>
-			
+			<div id="gpw">
+					<h2>Gallery Post Widget</h2>
+						<center><img src='./files/more/Gallery Post Widget.png'/></center>
+					<h3>Simple Setup</h3>
+					<p>To add Gallery Post widget follow this step</p>
+						<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>On its Area Click <span class='addgadget'>Add a Gadeget</span></li>
+						<li>Choose <strong class="html">HTML/Javascript</strong> Widget</li>
+						<li>Copy this Code:</li>
+							<code>&lt;div id=&quot;gallery1post1&quot;&gt;&lt;/div&gt;
+&lt;script type=&#39;text/javascript&#39;&gt;
+jQuery(&quot;#gallery1post1&quot;).RecentPostbyTag({
+MaxPost:13,
+tagName:&quot;Your_TagName&quot;,
+postType: &quot;g1&quot;
+});
+&lt;/script&gt;</code>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>
+					</ol>	
+			</div>
+			<div id="minislider">
+					<h2>Mini Slider Post Widget</h2>
+						<center><img src='./files/more/minislider.png'/></center>
+					<h3>Simple Setup</h3>
+					<p>To add Mini Slider Post widget follow this step</p>
+						<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>On its Area Click <span class='addgadget'>Add a Gadeget</span></li>
+						<li>Choose <strong class="html">HTML/Javascript</strong> Widget</li>
+						<li>Copy this Code:</li>
+							<code>&lt;div id=&quot;slider-rotator&quot; class=&quot;loading&quot;/&gt;
+&lt;script&gt;
+makeSlider({});
+&lt;/script&gt;&lt;/div&gt;</code>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>
+						</ol>	
+			</div>				
+			<div id="twitter">
+				<h2>Twitter Widget</h2>
+				<h3>Simple Setup</h3>
+				<div style="float:left;width:100%;">
+					<img src='./files/more/twitter.png'  style="float:right;width:320px;"/>
+					<ol style="float:left;width:380px;">
+					<p>To Create Twitter Widget follow this step</p>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li>On its Area Click <span class='addgadget'>Add a Gadeget</span></li>
+						<li>Choose <strong class="html">HTML/Javascript</strong> Widget</li>
+						<li>Copy this Code:</li>
+							<code>&lt;div id=&quot;BBTwitter&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function() {
+      $('#BBTwitter').BBTwitter({
+           username:&quot;Your-Username&quot;
+      });
+  });
+&lt;/script&gt;</code>
+						<li>Then Click <strong class="buttonorg">Save</strong></li>
+					</ol>				
+					</div>
+					
+					<h3>Advanced Setup</h3>
+					Complete Javascript to call Twitter Widget like this code:
+					<code>&lt;div id=&quot;BBTwitter&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+  $(document).ready(function() {
+      $('#BBTwitter').BBTwitter({                       
+	username:&quot;Your-Username&quot;,
+	limit:5,
+	profile_image:true,
+	show_time:true,
+	show_media:false
+      });
+  });
+&lt;/script&gt;</code>
+				<h3>How to use Codes?</h3>
+				<table class="table table-bordered table-striped">
+                                    			<thead>
+                                       				<tr>
+                                            					<th>Property</th>
+                                            					<th>Description</th>
+                                        				</tr>
+                                    			</thead>
+                                    			<tbody>
+                        					<tr>
+                            						<td>username</td>
+                            						<td>Enter your Twitter Username</td>
+                        					</tr>           
+                        					<tr>
+                            						<td>limit</td>
+                            						<td>Limit of the tweets you want to display in widget</td>
+                        					</tr>  
+                        					<tr>
+                            						<td>profile_image</td>
+                            						<td>true or false to show your Twitter Profile picture</td>
+                        					</tr>  
+                        					<tr>
+                            						<td>show_time</td>
+                            						<td>true or false to show your Tweet timimg</td>
+                        					</tr>  
+                        					<tr>
+                            						<td>show_media</td>
+                            						<td>true or false to show media for your Twitter.</td>
+                        					</tr>       
+                   			 </tbody>                                		
+				</table>
+			</div>
 			<div id="ad">
 					<h2>Post's Advertisement</h2>
 					<h3>Direct Way</h3>
@@ -1106,7 +1237,7 @@ This may happen if you have entered site url incorrectly or this page doesn&amp;
 						<li>Then Click <strong class="buttonorg">Save Template</strong></li>
 						</ol>
 			</div>
-			<div  id="archivepage">
+			<div id="archivepage">
 					<h2>Archive Page</h2>
 						<img src='./files/more/Archive Page.png'/>
 						<p>If don't know how to make New Page Follow this step.</p>
@@ -1120,7 +1251,7 @@ This may happen if you have entered site url incorrectly or this page doesn&amp;
 						</ol>
 
 			</div>
-			<div  id="sitemappage">
+			<div id="sitemappage">
 					<h2>Sitemap Page</h2>
 						<img src='./files/more/Sitemap.png'/>
 					<h3>Simple Setup</h3>
@@ -1217,32 +1348,46 @@ var tabbedTOC = {
 
 
 			</div>
+			<div id="contactpage">
+					<h2>Contact Form Page</h2>
+						<center><img src='./files/more/contactpage.png'/></center><br/>
+						<p>If don't know how to make New Page Follow this step.</p>
+						<ol>
+							<li>On Blogger Dashboard Click <strong class="page">Page</strong></li>
+							<li>Click <strong class="buttonx">New page</strong> and choose blank page</li>
+							<li>Give title to Page</li>
+							<li>Click <strong class="buttonx">HTML</strong> and copy below codes</li>
+							<code>&lt;div id='PP_ContactPage'&gt;&lt;form name=&quot;contact-form&quot;&gt;&lt;input id='ContactForm1_contact-form-name' name='name'  placeholder=&quot;Name&quot; value='' type='text' /&gt;&lt;input id=&quot;ContactForm1_contact-form-email&quot; name=&quot;email&quot; placeholder=&quot;Email&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;&lt;textarea cols=&quot;25&quot; id=&quot;ContactForm1_contact-form-email-message&quot; name=&quot;email-message&quot; placeholder=&quot;Message&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;&lt;input class=&quot;btn medium green&quot; id=&quot;ContactForm1_contact-form-submit&quot; type=&quot;button&quot; value=&quot;Send Message Now&quot; style=&quot;width:100%;height:50px&quot;/&gt;&lt;div style=&quot;text-align: center; max-width: 100%;&quot;&gt;&lt;p class=&quot;contact-form-error-message&quot; id=&quot;ContactForm1_contact-form-error-message&quot;&gt;&lt;/p&gt;&lt;p class=&quot;contact-form-success-message&quot; id=&quot;ContactForm1_contact-form-success-message&quot;&gt;&lt;/p&gt;&lt;/div&gt;&lt;/form&gt;&lt;/div&gt;</code>
+						<li>Then Click <strong class="buttonorg">Update</strong> or <strong class="buttonorg">Publish</strong></li>
+						</ol>
 
+			</div>
 			<div id="postsummery">
-					<h2>Post Summery Customization</h2>
+					<h2>Post Summery, Load more & Page Navi, etc Customization</h2>
 					<p class="note">
-						Summary and Load more image use Official Blogspot Thumbnail. It mean the image must upload to blogspot for make it show on home page.
-
-					</p>
+						Summary and Load more image use Official Blogspot Thumbnail. It mean the image must upload to blogspot for make it show on home page.					</p>
 					<div style="float:left;width:100%;">
 					<ol style="float:left;width:340px;">
 						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
-						<li> Then click <strong class="buttonx">Edit HTML</strong></span></li>
+						<li> Then click <strong class="buttonx">Edit HTML</strong></li>
 						<li>Scroll down and Find this Code :</li>
 						<code>var configSummary = {
-thumbnailSize: &quot;s180-c&quot;, 
-summaryLength: 200, 
-slideffect: true,
-maxImage:5,
-slideSpeed: 3000,
-BackupImage: &#39;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&#39;
+    thumbnailSize: &quot;s180-c&quot;, 
+    summaryLength: 200, 
+    slideffect: true, 
+    maxImage:5, 
+    slideSpeed: 3000, 
+    defaultNavigation:&quot;LoadMore&quot;,
+    defaultView:&quot;grid&quot;, 
+    postPerPage:6, 
+    numshowpage:3
 };</code>
 						<li>Change them according to you</li>
 						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
 						</ol>
 					<br/><br/><img src='./files/more/Summery1.png'  style="float:right;width:330px;"/>
 					<img src='./files/more/Summery2.png'  style="float:right;width:330px;"/>
-				</div>
+              		</div>
 					<h3>How to use codes?</h3>
 				<table class="table table-bordered table-striped">
                                     			<thead>
@@ -1251,323 +1396,46 @@ BackupImage: &#39;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/
                                             					<th>Description</th>
                                         				</tr>
                                     			</thead>
-                                    			<tbody>
+                                			<tbody>
+                                    				<tr>
+                                        					<td>thumbnailSize</td>
+                                        					<td>Image Format use Picasa/Blogspot image format:  <br>To make square image (180x180) Image Format use like this "s180-c" or "s180-p". image will be crop to make it square.<br>Blogspot Image format also look like this : "s180" (if image landscape width will 180px. If image Portrait height will 180px), "w180" (image width will 180px) or "h180" (image height will 180px)</td>
+                                    				</tr>
+                                    				<tr>
+                                        					<td>summaryLength</td>
+                                        					<td>Define the summary length</td>
+                                    				</tr>
+                                    				<tr>
+                                        					<td>slideffect</td>
+                                        					<td>If your post have image more than you set this <i>true</i> image will become slideshow. note: this setting must be same with Load More Post or Page Navigation</td>
+                                    				</tr>
+                                    				<tr>
+                                        					<td>maxImage</td>
+                                        					<td>Maximum image add to the sildeshow</td>
+                                    				</tr>
+                                    				<tr>
+                                        					<td>slideSpeed</td>
+                                        					<td>Set the speed of the slideshow cycling, in milliseconds</td>
+                                    				</tr>
+                                    				<tr>
+                                        					<td>defaultNavigation</td>
+                                        					<td>default home page navigation: "LoadMore" or "PageNavi"</td>
+                                    				</tr>
 						<tr>
-                                            					<td>thumbnailSize</td>
-                                           					<td>Define the post thumbnail size</td>
-                                        				</tr>
+                                        					<td>defaultView</td>
+                                        					<td>This will setup view mode: you can choose <i>"grid"</i> to show your's post on grid mode or <i>"list"</i> to show your's post on list mode</td>
+                                    				</tr>
 						<tr>
-                                            					<td>summaryLength</td>
-                                           					<td>Define the summary length</td>
-                                        				</tr>
+                                        					<td>postPerPage</td>
+                                        					<td>Number Post Will show if next Page Number Click. Note must be same with "Show at most" on Blogger Setting</td>
+                                    				</tr>
 						<tr>
-                                            					<td>slideffect</td>
-                                           					<td>Define to make image slide</td>
-                                        				</tr>
-						<tr>
-                                            					<td>maxImage</td>
-                                           					<td>Define Maximal Image to image slide</td>
-                                        				</tr>
-						<tr>
-                                            					<td>slideSpeed</td>
-                                           					<td>Define Slideshow Speed in milisecond</td>
-                                        				</tr>
-						<tr>
-                                            					<td>BackupImage</td>
-                                           					<td>Backup image if post don't have image   </td>
-                                        				</tr>
-					</tbody>
+                                        					<td>numshowpage</td>
+                                        					<td>Number Page Number will Show</td>
+                                    				</tr>
+                                			</tbody>
 				</table>
-			</div>
-			<div id="viewmode">
-					<h2>Post View Mode Customization</h2>
-					<p class="note">
-						Summary and Load more image use Official Blogspot Thumbnail. It mean the image must upload to blogspot for make it show on home page.
-
-					</p>
-					<div style="float:left;width:100%;">
-					<ol style="float:right;width:400px;">
-						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
-						<li> Then click <strong class="buttonx">Edit HTML</strong></span></li>
-						<li>Scroll down and Find this Code :</li>
-						<code>viewMode({
-viewmodedefault:&quot;grid&quot;,
-cookielist:&quot;list&quot;,
-cookiegrid:&quot;grid&quot;
-});</code>
-						<li>Change them according to you</li>
-						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
-						</ol>
-					<img src='./files/more/Summery1.png'  style="float:left;width:270px;"/>
-					<img src='./files/more/Summery2.png'  style="float:left;width:270px;"/>
-				</div>
-					<h3>How to use codes?</h3>
-				<table class="table table-bordered table-striped">
-                                    			<thead>
-                                        				<tr>
-                                            					<th>Property</th>
-                                            					<th>Description</th>
-                                        				</tr>
-                                    			</thead>
-                                    			<tbody>
-                                        				<tr>
-                                            					<td>viewmodedefault</td>
-                                            					<td>This will setup view mode: you can choose <i>&quot;grid&quot;</i> to show your's post on grid mode or <i>&quot;list&quot;</i> to show your's post on list mode</td>
-                                        				</tr>
-                                       				<tr>
-                                            					<td>cookielist</td>
-                                            					<td>List mode Cookies name. This will store on browser to make if user click list mode button.</td>
-                                        				</tr> 
-						<tr>
-                                            					<td>cookiegrid</td>
-                                            					<td>Grid mode Cookies name. This will store on browser to make if user click Grid mode button.</td>
-                                        				</tr>
-					</tbody>
-                                		</table>
-
-
-			</div>
-			<div id="loadmoreposts">
-					<h2>Load More Posts Customization</h2>
-					<p class="note">
-						Summary and Load more image use Official Blogspot Thumbnail. It mean the image must upload to blogspot for make it show on home page.
-
-					</p>
-					<div style="float:left;width:100%;">
-					<ol style="float:left;width:270px;">
-						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
-						<li> Then click <strong class="buttonx">Edit HTML</strong></span></li>
-						<li>Scroll down and Find this Code :</li>
-						<code>loadMorePost ({
-thumbnailSize:&quot;s180-c&quot;,
-summaryLength:200,
-MoreText:&quot;Load more posts&quot;
-});</code>
-						<li>Change them according to you</li>
-						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
-						</ol>
-					<br/><br/><img src='./files/more/Summery1.png'  style="float:right;width:400px;"/>
-				</div>
-					<h3>Advanced Setup</h3>
-					Complete Javascript to setup Load More Post like this code:
-					<code>loadMorePost({
-thumbnailSize:&quot;s180-c&quot;,
-summaryLength:200,
-MoreText:&quot;Load more posts&quot;,
-viewmodedefault:&quot;grid&quot;,
-cookielist:&quot;list&quot;,
-cookiegrid:&quot;grid&quot;,
-monthName:[&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
-slideffect:true,
-maxImage:5,
-slideSpeed:5000,
-BackupImage:&quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;
-});</code>
-					<h3>How to use codes?</h3>
-					<table class="table table-bordered table-striped">
-                                   				<thead>
-                                        					<tr>
-                                            						<th>Property</th>
-                                            						<th>Description</th>
-                                        					</tr>
-                                    				</thead>
-                                    				<tbody>
-							<tr>
-                                            						<td>thumbnailSize</td>
-                                            						<td>Image Format use Picasa/Blogspot image format: <br>
-								To make square image (180x180) Image Format use like this "s180-c" or "s180-p". image will be crop to make it square.<br>
-								Blogspot Image format also look like this : "s180" (if image landscape width will 180px. If image Portrait height will 180px), "w180" (image width will 180px) or "h180" (image height will 180px)
-								</td>
-                                        					</tr>
-							<tr>
-                                            						<td>summaryLength</td>
-                                            						<td>Define the summary length</td>
-                                        					</tr>
-							<tr>
-                                            						<td>MoreText</td>
-                                            						<td>Load more text to display: default: &quot;Load more posts&quot;</td>
-                                        					</tr>
-                                       					<tr>
-                                            						<td>viewmodedefault</td>
-                                            						<td>This will setup view mode: you can choose <i>&quot;grid&quot;</i> to show your's post on grid mode or <i>&quot;list&quot;</i> to show your's post on list mode (make it same setting with view mode javascript)</td>
-                                        					</tr>
-                                        					<tr>
-                                            						<td>cookielist</td>
-                                            						<td>List mode Cookies name. This will store on browser to make if user click list mode button. (make it same name with view mode javascript)</td>
-                                        					</tr> 
-							<tr>
-                                            						<td>cookiegrid</td>
-                                            						<td>Grid mode Cookies name. This will store on browser to make if user click Grid mode button. (make it same name with view mode javascript)</td>
-                                        					</tr> 
-							<tr>
-                                            						<td>monthName</td>
-                                           						<td>Month Name language. This month name must be same with datenya(); month name</td>
-                                        					</tr>
-							<tr>
-                                            						<td>slideffect</td>
-                                            						<td>If your post have image more than you set this <i>true</i> image will become slideshow. note: this setting must be same with Summary Script</td>
-                                        					</tr>
-							<tr>
-                                            						<td>maxImage</td>
-                                           						<td>Maximum image add to the sildeshow</td>
-                                        					</tr>
-							<tr>
-                                            						<td>slideSpeed</td>
-                                            						<td>Set the speed of the slideshow cycling, in milliseconds</td>
-                                        					</tr>										
-                                     					<tr>
-                                            						<td>BackupImage</td>
-                                            						<td>Backup image if post don't have image store on blogspot or picasa web.</td>
-                                        					</tr> 
-                                   				</tbody>
-                                			</table>
-
-
-			</div>
-			<div id="postdate">
-					<h2>Post Date Customization</h2>
-					<img src='./files/more/Post Date.png'/>
-					<ol>
-						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
-						<li> Then click <strong class="buttonx">Edit HTML</strong></span></li>
-						<li>Scroll down and Find this Code :</li>
-						<code>datenya();</code>
-						<li>Complete Javascript to setup view mode like this code:</li>
-						<code>datenya({
-monthName:[&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;]
-});</code>
-						<li>Click <strong class="buttonorg">Save Template</strong></li>
-						</ol>
-					<p class="note">If you change this month name you must change Load More Post or Page Navigation month name too.</p>
-			</div>
-			<div id="pagenavi">
-					<h2>Page Navigation Customization</h2>
-					<img src='./files/more/Page Navigation.png'/>
-					<h3>Simple Setup</h3>
-					<ol>
-						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
-						<li> Then click <strong class="buttonx">Edit HTML</strong></span></li>
-						<li>Scroll down at last and Find this Code :</li>
-						<code>viewMode({
-  viewmodedefault:&#39;list&#39;,
-  cookielist:&#39;list1&#39;,
-  cookiegrid:&#39;grid1&#39;
-});
-loadMorePost({
-  viewmodedefault:&#39;list&#39;,
-  cookielist:&#39;list1&#39;,
-  cookiegrid:&#39;grid1&#39;,
-  thumbnailSize:&quot;s180-c&quot;,
-  summaryLength:200,
-  MoreText:&quot;Load more posts&quot;
-});</code>
-						<li>and this Codes</li>
-						<code>viewMode();
-loadMorePost({
-  thumbnailSize:&quot;s180-c&quot;,
-  summaryLength:200,
-  MoreText:&quot;Load more posts&quot;
-});</code>
-						<li>Replace both codes with these codes</li>
-							<code>viewMode();
-pageNavi({
-postperpage:6,
-numshowpage:3,	
-thumbnailSize:&quot;s180-c&quot;,
-summaryLength:200,
-});</code>
-						<li>Click <strong class="buttonorg">Save Template</strong></li>
-						</ol>
-					<h3>Advanced Setup</h3>
-					Complete Javascript to setup page Navigation like this code:
-					<code>pageNavi({
-postperpage:6,
-numshowpage:3,
-previous:&quot;&amp;#171;&quot;,
-next:&quot;&amp;#187;&quot;,
-loadAjax:true,		
-thumbnailSize:&quot;s180-c&quot;,
-summaryLength:200,
-viewmodedefault:&quot;grid&quot;,
-cookielist:&quot;list&quot;,
-cookiegrid:&quot;grid&quot;,
-monthName:[&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
-slideffect:true,
-maxImage:5,
-slideSpeed:5000,
-BackupImage:&quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;
-});</code>
-					<h3>How to use Codes?</h3>
-					<table class="table table-bordered table-striped">
-                                    				<thead>
-                                        					<tr>
-                                            						<th>Property</th>
-                                            						<th>Description</th>
-                                        					</tr>
-                                    				</thead>
-                                    				<tbody>
-							<tr>
-                                            						<td>postperpage</td>
-                                            						<td>Number Post Will show if next Page Number Click. Note must be same with "Show at most" on Blogger Setting</td>
-                                        					</tr>
-							<tr>
-                                            						<td>numshowpage</td>
-                                            						<td>Number Page Number will Show</td>
-                                        					</tr>
-							<tr>
-                                            						<td>previous</td>
-                                           						<td>previous text/word.</td>
-                                        					</tr>
-							<tr>
-                                            						<td>next</td>
-                                            						<td>next text/word. </td>
-                                        					</tr>
-							<tr>
-                                            						<td>loadAjax</td>
-                                            						<td>option true or false. if set true will be same like Load more Post. If false page will be redirect</td>
-                                        					</tr>
-							<tr>
-                                            						<td>thumbnailSize</td>
-                                            						<td>Image Format use Picasa/Blogspot image format: <br>
-								To make square image (180x180) Image Format use like this "s180-c" or "s180-p". image will be crop to make it square.<br>
-								Blogspot Image format also look like this : "s180" (if image landscape width will 180px. If image Portrait height will 180px), "w180" (image width will 180px) or "h180" (image height will 180px)</td>
-                                        					</tr>
-							<tr>
-                                            						<td>summaryLength</td>
-                                            						<td>Define the summary length</td>
-                                       					</tr>
-                                        					<tr>
-                                            						<td>viewmodedefault</td>
-                                            						<td>This will setup view mode: you can choose <i>&quot;grid&quot;</i> to show your's post on grid mode or <i>&quot;list&quot;</i> to show your's post on list mode</td>
-                                        					</tr>
-                                        					<tr>
-                                            						<td>cookielist</td>
-                                            						<td>List mode Cookies name. This will store on browser to make if user click list mode button.</td>
-                                       					</tr> 
-							<tr>
-                                            						<td>cookiegrid</td>
-                                            						<td>Grid mode Cookies name. This will store on browser to make if user click Grid mode button.</td>
-                                        					</tr> 
-							<tr>
-                                            						<td>monthName</td>
-                                            						<td>Month Name language. This month name must be same with datenya(); month name</td>
-                                        					</tr>										
-                                    					<tr>
-                                            						<td>slideffect</td>
-                                           						<td>If your post have image more than you set this <i>true</i> image will become slideshow. note: this setting must be same with Summary Script</td>
-                                        					</tr>
-							<tr>
-                                            						<td>maxImage</td>
-                                            						<td>Maximum image add to the sildeshow</td>
-                                        					</tr>
-							<tr>
-                                            						<td>slideSpeed</td>
-                                            						<td>Set the speed of the slideshow cycling, in milliseconds</td>
-                                        					</tr>
-                                   				</tbody>
-                                			</table> 
-
-			</div>
+			</div>		
 			<div id="recentcmt">
 					<h2>Recent Comment Customization</h2>
 						To add recent comments widget follow this step
@@ -1587,19 +1455,20 @@ RecentComments();
 				</div>
 					<h3>Advanced Setup</h3>
 				Complete Javascript to call Recent Comments like this code:
-					<code>RecentComments({
+					<code>&lt;div id=&quot;rcentcomnets&quot;&gt;&lt;/div&gt;
+&lt;script type=&#39;text/javascript&#39;&gt;
+RecentComments({
 blogURL:&quot;&quot;,
 numComments:4,
 characters:100,
 id_containrc:&quot;#rcentcomnets&quot;,
 avatarSize:50,
-loadingClass:&quot;loadingxx&quot;,
 Showimage:true,
 defaultAvatar:&quot;http://4.bp.blogspot.com/-AEWksK942OE/UFiyLzXJhiI/AAAAAAAAFKE/jBegaGPClxI/s70/user-anonymous-icon.png&quot;,
-MonthNames:[&quot;Jan&quot;,&quot;Feb&quot;,&quot;Mar&quot;,&quot;Apr&quot;,&quot;May&quot;,&quot;Jun&quot;,&quot;Jul&quot;,&quot;Aug&quot;,&quot;Sep&quot;,&quot;Oct&quot;,&quot;Nov&quot;,&quot;Dec&quot;],
 maxfeeds:50,
 adminBlog:&quot;&quot;
-});</code>
+});
+&lt;/script&gt;</code>
 					<h3>How to use Codes?</h3>
 				<table class="table table-bordered table-striped">
                                     			<thead>
@@ -1608,55 +1477,44 @@ adminBlog:&quot;&quot;
                                             					<th>Description</th>
                                         				</tr>
                                     			</thead>
-                                    			<tbody>
-						<tr>
-                                            					<td>blogURL</td>
-                                            					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>numComments</td>
-                                            					<td>maximum number of recent comment</td>
-                                        				</tr>
-                                       				<tr>
-                                           					<td>characters</td>
-                                            					<td>Number of summary characters to show. if set 0, will not show summary</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>id_containrc</td>
-                                            					<td>ID of div where the recent comment will be display must add this #, Example: if want to show in &lt;div id=&quot;rcentcomnets&quot;&gt;&lt;/div&gt; write like this &quot;#rcentcomnets&quot;</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>avatarSize</td>
-                                            					<td>Image thumbnail size/avatar size</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>loadingClass</td>
-                                            					<td>Class went the recent comment loading.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>Showimage</td>
-                                            					<td>Show or hide the avatar. Value : true or false</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>defaultAvatar</td>
-                                            					<td>Backup image if comment author don't have avatar image</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>MonthNames</td>
-                                           					<td>Format month name</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>maxfeeds</td>
-                                           					<td>Maximum feed to load</td>
-                                        				</tr>
-                                      				<tr>
-                                            					<td>adminBlog</td>
-                                            					<td>Control to show or hide author/admin comment. ex: if you don't want to show your comment, simply just write yours blogger name like this adminBlog:"satank MKR" </td>
-                                        				</tr>
-                                    			</tbody>
-                                		</table> 
-
-			</div>
+                           				<tbody>
+                                				<tr>
+                                    					<td>blogURL</td>
+                                    					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>numComments</td>
+                                    					<td>maximum number of recent comment</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>characters</td>
+                                    					<td>Number of summary characters to show. if set 0, will not show summary</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>id_containrc</td>
+                                    					<td>ID of div where the recent comment will be display must add this #, Example: if want to show in &lt;div id=&quot;rcentcomnets&quot;&gt;&lt;/div&gt; write like this &quot;#rcentcomnets&quot;</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>avatarSize</td>
+                                    					<td>Image thumbnail size/avatar size</td>
+                                				</tr>                                
+                                				<tr>
+                                    					<td>Showimage</td>
+                                    					<td>Show or hide the avatar. Value : true or false</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>defaultAvatar</td>
+                                    					<td>Backup image if comment author don't have avatar image</td>
+                                				</tr>                                
+                                				<tr>
+                                    					<td>maxfeeds</td>
+                                    					<td>Maximum feed to load</td>
+                                				</tr>
+                                				<tr>
+                                   					<td>adminBlog</td>
+                                    					<td>Control to show or hide author/admin comment. ex: if you don't want to show your comment, simply just write yours blogger name like this adminBlog:"Harman Singh Hira"</td>
+                                				</tr>
+                            				</tbody>                                		</table> 			</div>
 			<div id="searchbox">
 					<h2>JSON Search Result Customization</h2>
 					<div style="float:left;width:100%;">
@@ -1724,9 +1582,7 @@ scrthumbSize:50
                                             						<td>Size of thumbnail image, size in pixel</td>
                                         					</tr>                                        
                                     				</tbody>
-                                			</table> 
-
-			</div>
+                                			</table> 			</div>
 			<div id="emoticon">
 					<h2>Emoticon Customization</h2>
 					<img src='./files/more/Emoticon.png'/><br/><br/>
@@ -1769,9 +1625,7 @@ emoMessage:&quot;To insert emoticon you must added at least one space before the
                                            						<td>Sentence below the emoticon sample and alert box</td>
                                         					</tr>										                                        
                                     				</tbody>
-                                			</table> 
-
-			</div>
+                                			</table> 			</div>
 			<div id="newsticker">
 					<h2>News Ticker Customization</h2>
 					<img src='./files/more/News Ticker.png' style="width:100%"/><br/><br/>
@@ -1825,14 +1679,12 @@ MonthNames: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;,
                                             						<td>Format months name</td>
                                         					</tr>
                                     				</tbody>
-                                			</table> 
-
-			</div>
+                                			</table> 			</div>
 			<div id="relatedposts">
 					<h2>Related Posts Customization</h2>
 					<div style="float:left;width:100%;">
-					<img src='./files/more/Related Posts.png'  style="float:left;width:370px;"/>
-					<ol style="float:right;width:320px;">
+					<center><img src='./files/more/Related Posts.png' /></center>
+					<ol>
 						<li>On Dashboard Click <strong class="template">Template</strong></li>
 						<li>Choose <strong class="buttonx">Edit HTML</strong></li>
 						<li>Scroll down and Find this Code :</li>
@@ -1850,13 +1702,8 @@ ShowComment:true,
 ShowDate:true,
 DateFloat:false,
 ShowDesc:true,
-rlt_summary:100,			
-relatedTitle:&quot;Related Posts&quot;,
-readMoretext:&quot;Read more &#187;&quot;			
-rlpBlank:&quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s1600/grey.gif&quot;
+readMoretext:&quot;Read more &raquo;&quot;,
 rlt_thumb:70			
-recentTitle:&quot;Recent Posts&quot;
-MonthNames:[&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;]
 });</code>
 					<h3>How to use Codes?</h3>
 				<table class="table table-bordered table-striped">
@@ -1866,83 +1713,73 @@ MonthNames:[&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, 
                                             					<th>Description</th>
                                         				</tr>
                                     			</thead>
-                                    			<tbody>
-						<tr>
-                                            					<td>blogURL</td>
-                                            					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>maxPosts</td>
-                                            					<td>Maximum number of article will be show (if Related Post)</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>maxTags</td>
-                                            					<td>Maximum Tag/Label will load</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>maxPostsPerTag</td>
-                                            					<td>Maximum post each tag/label will be show (maximum recent post if article don't have tag/label)</td>
-                                        				</tr>
-						<tr>
-                                            					<td>ShowComment</td>
-                                            					<td>Show or Hide Comment Number. option true or false</td>
-                                        				</tr> 
-						<tr>
-                                            					<td>ShowDate</td>
-                                            					<td>Show or hide Date. option true or false</td>
-                                       				</tr>
-						<tr>
-                                            					<td>DateFloat</td>
-                                            					<td>If you want make the date like Recent Post by Tag Date model.</td>
-                                        				</tr> 
-						<tr>
-                                            					<td>ShowDesc</td>
-                                           					<td>Show or hide post description. option true or false</td>
-                                        				</tr>										
-						<tr>
-                                            					<td>rlt_summary</td>
-                                           					<td>Length of summary characters</td>
-                                        				</tr>                                        
-                                       				<tr>
-                                           					<td>rlt_thumb</td>
-                                            					<td>Size of thumbnail image, size in pixel</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>relatedTitle</td>
-                                            					<td>Title if article have related post</td>
-                                        				</tr>
-                                        				<tr>
-                                            					<td>recentTitle</td>
-                                            					<td>Title if article don't have related post (will be load recent post)</td>
-                                       				</tr>
-						<tr>
-                                            					<td>readMoretext</td>
-                                            					<td>Read More Text</td>
-                                        				</tr>
-						<tr>
-                                            					<td>rlpBlank</td>
-                                            					<td>Backup image if post don't have image</td>
-                                        				</tr>
-						<tr>
-                                            					<td>MonthNames</td>
-                                            					<td>Month name format</td>
-                                       				</tr>										
-                                   			</tbody>
-                                		</table> 
-
-                                			
-
-
+                              				<tbody>
+                                				<tr>
+                                    					<td>blogURL</td>
+                                    					<td>Yours blog URL or you can leave it blank to load where this script load.</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>maxPosts</td>
+                                    					<td>Maximum number of article will be show (if Related Post)</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>maxTags</td>
+                                    					<td>Maximum Tag/Label will load</td>
+                               					</tr>
+                                				<tr>
+                                    					<td>maxPostsPerTag</td>
+                                    					<td>Maximum post each tag/label will be show (maximum recent post if article don't have tag/label)</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>ShowComment</td>
+                                    					<td>Show or Hide Comment Number. option true or false</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>ShowDate</td>
+                                    					<td>Show or hide Date. option true or false</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>DateFloat</td>
+                                    					<td>If you want make the date like Recent Post by Tag Date model.</td>
+                                				</tr>
+                                				<tr>
+                                    					<td>ShowDesc</td>
+                                    					<td>Show or hide post description. option true or false</td>
+                                				</tr>                              
+                                				<tr>
+                                    					<td>rlt_thumb</td>
+                                    					<td>Size of thumbnail image, size in pixel</td>
+                                				</tr>                                
+                                				<tr>
+                                    					<td>readMoretext</td>
+                                    					<td>Read More Text</td>
+                                				</tr>                               
+                            				</tbody>                                		</table>                                 			
+			</div>
+			<div id="authorbox">
+					<h2>Author Box</h2>
+					<center><img src="./files/more/author.png"/></center>
+					<ol>
+						<li>On Dashboard Click <strong class="template">Template</strong></li>
+						<li>Choose <strong class="buttonx">Edit HTML</strong></li>
+						<li>Scroll down and Find this Code :</li>
+						<code>top-authorinfo</code>
+						<li>Replace Social Link and Info according to you.</li>
+						<li>Click <strong class="buttonorg">Save Template</strong></li>
+					</ol>
 			</div>
 			<div id="customizer">
 					<h2>Theme Customizer</h2>
 					<ol>
 						<li>Just Go to Blogger Dashbord and Click <strong class="template">Template</strong></li>
-						<li> Then Click <strong class="buttonorg">Customize</strong> and now on Advanced</li>
+						<li> Then Click <strong class="buttonorg">Customize</strong></li>
 					</ol>
 					<p class="note">Blogger Customize will work if Blogger Mobile Template Enabled before upload this Theme. After customize yours template you can disable Blogger Mobile Template but it will make Blogger Customize not work</p>
-					<img src='./files/more/Theme Customizer.png'  style="width:100%"/>
-					<h3>Customizer Guide</h3>
+					<h3>Background Customizer</h3>
+					<p>Just select or upload imagge to set as background image or you can also choose any color for background.</p>
+					<img src='./files/more/Theme Customizer2.png'  style="width:100%"/>
+					<h3>Advanced Customizer</h3>
+					<img src='./files/more/Theme Customizer.png'  style="width:100%"/><br/><br/>
                             			<table class="table table-bordered table-striped">
                                     			<thead>
                                         				<tr>
@@ -2048,137 +1885,249 @@ MonthNames:[&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, 
                                            					<td>Post Title color or artikel</td>
                                         				</tr>										
                                     			</tbody>
-                                		</table> 
-
+                                		</table>
+ 			</div>
+			<div id="globalconfig">
+				<h2>Global Configurations</h2>
+					<ol>
+						<li>On Dashboard Click <strong class="template">Template</strong></li>
+						<li>Choose <strong class="buttonx">Edit HTML</strong></li>
+						<li>Scroll down and Find this Code :</li>
+						<code>var Alldefaultconfig = {
+    MaxPost:5,
+    MoreText: &quot;Load more posts&quot;,
+    monthName: [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;],
+    timemonthName: [&quot;January&quot;, &quot;February&quot;, &quot;March&quot;, &quot;April&quot;, &quot;May&quot;, &quot;June&quot;, &quot;July&quot;, &quot;August&quot;, &quot;September&quot;, &quot;October&quot;, &quot;November&quot;, &quot;December&quot;], 
+    timeFormat:&quot;12&quot;,
+    viewMoreText: &quot;View More About&quot;,
+    BackupImage: &quot;http://1.bp.blogspot.com/-htG7vy9vIAA/Tp0KrMUdoWI/AAAAAAAABAU/e7XkFtErqsU/s72-c/grey.gif&quot;,
+    summaryLength:100,    
+    FirstImageSize:&quot;s220-p&quot;,
+    ImageSize:&quot;s70-p&quot;,
+    slideshowSpeed:5000,
+    RandomTitle:&quot;Random Posts&quot;,
+    RecentTitle:&quot;Recent Posts&quot;,
+    RelatedTitle:&quot;Related Posts&quot;,
+    RelatedStyle:&quot;carousel&quot;,
+    CommentMode:&quot;blogger&quot;,
+    redirectMobile:false,
+    transitionStyle:&quot;backSlide&quot;
+};</code>
+						<li>Change the settings according to you by reading below.</li>
+						<li>Click <strong class="buttonorg">Save Template</strong></li>
+					</ol>
+			<table class="table table-bordered table-striped">
+                			<thead>
+                    				<tr>
+                        					<th>Property</th>
+                        					<th>Description</th>
+                    				</tr>
+                			</thead>
+                			<tbody>
+                   				<tr>
+                        					<td>MaxPost</td>
+                        					<td>Default Maximum Post (Recent Post by Tag,RelatedPost,AutoFeaturePost)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>MoreText</td>
+                        					<td>Define Load More Text if Recent Post </td>
+                    				</tr>
+                    				<tr>
+                        					<td>monthName</td>
+                        					<td>Month Name format (Recent Post by Tag, Recent Comment, AutoFeatured Post, Related Post, News Ticker)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>timemonthName</td>
+                        					<td>Month Name Format for Top navigation Date Time Widget</td>
+                    				</tr>
+                    				<tr>
+                        					<td>timeFormat</td>
+                        					<td>Time Format for Top navigation Date Time Widget </td>
+                    				</tr>
+                    				<tr>
+                        					<td>viewMoreText</td>
+                        					<td>Define More Text (Recent Post by Tag and JSON Search)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>BackupImage</td>
+                        					<td>Backup image if post don&#39;t have image  </td>
+                    				</tr>
+                    				<tr>
+                        					<td>summaryLength</td>
+                        					<td>Default Summary Length (Recent Post by Tag, Related Post, JSON Search,AutoFeaturePost)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>FirstImageSize</td>
+                        					<td>Default First Image Size in Recent Post by Tag (blogger/blogspot format).Image Format use Picasa/Blogspot image format: <br/>
+To make square image (200x200) Image Format use like this &quot;s200-c&quot; or &quot;s200-p&quot;. image will be crop to make it square.<br/>
+Blogspot Image format also look like this : &quot;s200&quot; (if image landscape width will 200px. If image Portrait height will 200px), &quot;w200&quot; (image width will 200px) or &quot;h200&quot; (image height will 200px)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>ImageSize</td>
+                        					<td>Default Image Size in Recent Post by Tag (blogger/blogspot format). Image Format use Picasa/Blogspot image format: <br/>
+To make square image (200x200) Image Format use like this &quot;s200-c&quot; or &quot;s200-p&quot;. image will be crop to make it square.<br/>
+Blogspot Image format also look like this : &quot;s200&quot; (if image landscape width will 200px. If image Portrait height will 200px), &quot;w200&quot; (image width will 200px) or &quot;h200&quot; (image height will 200px)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>slideshowSpeed</td>
+                        					<td>Default Slideshow Speed in milisecond (Featured Post, Slider Post on RecentPost by Tag )</td>
+                    				</tr>
+                    				<tr>
+                        					<td>RandomTitle</td>
+                        					<td>Define Random Post Title (if Random Post widget don&#39;t have title)</td>
+                    				</tr>
+                    				<tr>
+                        					<td>RecentTitle</td>
+                        					<td>Define Recent Post Title</td>
+                    				</tr>
+                    				<tr>
+                        					<td>RelatedStyle</td>
+                        					<td>Related post style: there are two related post style "carousel" or "normal" style</td>
+                    				</tr>
+					<tr>
+                        					<td>RelatedTitle</td>
+                        					<td>Define Related Post Title</td>
+                    				</tr>
+                    				<tr>
+                        					<td>CommentMode</td>
+                        					<td>Default Comment mode: "blogger" or "facebook" or "disqus"</td>
+                    				</tr> 
+					<tr>
+                        					<td>redirectMobile</td>
+                        					<td>enable or disable redirect Blogger Mobile version. true to enable, false to disable</td>
+                    				</tr>	
+					<tr>
+                        					<td>transitionStyle</td>
+                        					<td>slider effect: "fade","backSlide","goDown",or "fadeUp". this option just for lightweight version. </td>
+                    				</tr> 					
+                			</tbody>
+            			</table>
 			</div>
-			<div id="upload">
-				<h2>How to Upload Files to Google Code?</h2>
-				<p>The following is the recommended way by google if you want to storing Javascript files in google code</p>
-				<p class="note">Use this feature if Original Javascript Files, CSS Files or Images, etc delected from back. Otherwise there is no need of this Step. But you must have Backup Files to upload. If you do not have Backup up files then Download now.</p>
-				<h3>Installing TortoiseSVN</h3>
-				<ol>
-					<li>Visit this site <a href="http://tortoisesvn.net/downloads.html" target="_blank">http://tortoisesvn.net/downloads.html</a>. Download and install the application. Once installed, the computer must be restarted for this application will be integrated with the context menu / right click menu (shell command).
-Then right-click on the desktop. Select the TortoiseSVN -> Settings:</li>
-						<center><img src="./files/more/tortoise-svn_settings(1).png"/></center>
-					<li>Dialog box will appear like this. Click on General and click the Edit button:</li>
-						<center><img src="./files/more/tortoise-svn_edit-mime-type.png"/></center>
-					<li>Once the config file is open, copy this code and place it under comment # Makefile = svn:eol-style=native</li>
-						<code>[miscellany]
-enable-auto-props = yes
+			<div id="rtlwork">
+				<h2>RTL Support</h2>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
+						<li> Then click <strong class="buttonx">Edit HTML</strong></li>
+						<li>Scroll down and Find this Code :</li>
+						<code>&lt;Variable name=&quot;startSide&quot; description=&quot;Side where text starts in blog language&quot; type=&quot;automatic&quot; default=&quot;left&quot; value=&quot;left&quot;/&gt;
+&lt;Variable name=&quot;endSide&quot; description=&quot;Side where text ends in blog language&quot; type=&quot;automatic&quot; default=&quot;right&quot; value=&quot;right&quot;/&gt;</code>
+						<li>Replace with below codes</li>
+						<code>&lt;Variable name=&quot;startSide&quot; description=&quot;Side where text starts in blog language&quot; type=&quot;automatic&quot; default=&quot;right&quot; value=&quot;right&quot;/&gt;
+&lt;Variable name=&quot;endSide&quot; description=&quot;Side where text ends in blog language&quot; type=&quot;automatic&quot; default=&quot;left&quot; value=&quot;left&quot;/&gt;</code>
+						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
+						</ol>
+          </div>
+			<div id="facebookcomment">
+				<h2>Facebook Comment Setup</h2>
+				<h3>Settingup Blogger Layout</h3>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="layout">Layout</strong></li>
+						<li> Then click Edit for Blog Post Widget</li>
+						<center><img src="./files/more/commentblogedit.png"/></center>
+						<li>In the Configure Blog Posts window, you will pick comment systems by input their names in comment text field. Template supported 3 names: blogger, facebook, disqus. You can combine two of them by separate their names by "-". Example, combine blogger with facebook comment system like the demo blog, you can input <strong>blogger-facebook</strong>.</li>
+						<center><img src="./files/more/facebookcomment.png"/></center>
+						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
+					</ol>
+				<h3>How to Get Facebook Profile ID?</h3>
+					<ol>
+						<li><a  class='newtab'  href="http://designdevta.blogspot.com/2015/02/how-to-get-facebook-numeric-id-in-one.html" target="_blank">Click here</a> to get Profile ID</li>
+					</ol>
 
-[auto-props]
-# Scriptish formats
-*.bat        = svn:eol-style=native; svn:keywords=Id; svn-mine-type=text/plain
-*.bsh        = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/x-beanshell
-*.cgi        = svn:eol-style=native; svn:keywords=Id; svn-mine-type=text/plain
-*.cmd        = svn:eol-style=native; svn:keywords=Id; svn-mine-type=text/plain
-*.js         = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/javascript
-*.php        = svn:eol-style=native; svn:keywords=Id Rev Date; svn:mime-type=text/x-php
-*.pl         = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/x-perl; svn:executable
-*.pm         = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/x-perl
-*.py         = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/x-python; svn:executable
-*.sh         = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/x-sh; svn:executable
+				<h3>How to Get Facebook App ID?</h3>
+					<ol>
+						<li>Go to http://developers.facebook.com and login with your Facebook account.</li>
+						<li> If you don't already have a Facebook Developer account, click on the "Apps" button in the top title bar of the web page. Follow the steps in the wizard to register as a Facebook developer.</li>
+						<li>Once you're registered as a Facebook developer, click on the "Apps" button in the top title bar of the web page. Click on the "Create New App" button in the drop down menu to create a new Facebook app.</li>
+						<li>Choose the "Website" option on the right side of this window.</li>
+						<li>Choose a name for your app and click on the "Create New Facebook App ID" button.</li>
+						<center><img src="./files/more/facebookcomment2.png" width="100%"/></center>
+						<li> Choose a category for your app and click the "Create App ID" button.</li>
+						<li>Scroll to the bottom of the next page and fill in a valid Site URL and Mobile  Site URL. If you don't have a website or mobile site URL, just use http://www.example.com. Once you have entered your information here, click "Next".</li>
+						<center><img src="./files/more/facebookcomment3.png" width="100%"/></center>
+						<li>Scroll down the page and click the hyperlink "Skip to Developer Dashboard"</li>
+						<li>Once the Facebook app has successfully been created, you still need to set the app live before the necessary key (App ID and App Secret)</li>
+						<li>Go to the "Settings" page of your Facebook app and make sure that the Contact Email field is filled in. The app can't be set live without a Contact Email </li>
+						<li>Once you've entered your Contact Email, you can set the app live in the "Status &  Review" page of the app. </li>
+						<li>Go back to the "Dashboard" of the app. Here you will find the App ID </li>
+						<center><img src="./files/more/facebookcomment4.png" width="100%"/></center>
+						<li>Done</li>
 
-# Image formats
-*.bmp        = svn:mime-type=image/bmp
-*.gif        = svn:mime-type=image/gif
-*.ico        = svn:mime-type=image/ico
-*.jpeg       = svn:mime-type=image/jpeg
-*.jpg        = svn:mime-type=image/jpeg
-*.png        = svn:mime-type=image/png
-*.tif        = svn:mime-type=image/tiff
-*.tiff       = svn:mime-type=image/tiff
-
-# Data formats
-*.pdf        = svn:mime-type=application/pdf
-*.avi        = svn:mime-type=video/avi
-*.doc        = svn:mime-type=application/msword
-*.eps        = svn:mime-type=application/postscript
-*.gz         = svn:mime-type=application/gzip
-*.mov        = svn:mime-type=video/quicktime
-*.mp3        = svn:mime-type=audio/mpeg
-*.ppt        = svn:mime-type=application/vnd.ms-powerpoint
-*.ps         = svn:mime-type=application/postscript
-*.psd        = svn:mime-type=application/photoshop
-*.rtf        = svn:mime-type=text/rtf
-*.swf        = svn:mime-type=application/x-shockwave-flash
-*.tgz        = svn:mime-type=application/gzip
-*.wav        = svn:mime-type=audio/wav
-*.xls        = svn:mime-type=application/vnd.ms-excel
-*.zip        = svn:mime-type=application/zip
-
-# Text formats
-.htaccess    = svn:mime-type=text/plain
-*.css        = svn:mime-type=text/css
-*.dtd        = svn:mime-type=text/xml
-*.html       = svn:mime-type=text/html
-*.ini        = svn:mime-type=text/plain
-*.sql        = svn:mime-type=text/x-sql
-*.txt        = svn:mime-type=text/plain
-*.xhtml      = svn:mime-type=text/xhtml+xml
-*.xml        = svn:mime-type=text/xml
-*.xsd        = svn:mime-type=text/xml
-*.xsl        = svn:mime-type=text/xml
-*.xslt       = svn:mime-type=text/xml
-*.xul        = svn:mime-type=text/xul
-*.yml        = svn:mime-type=text/plain
-CHANGES      = svn:mime-type=text/plain
-COPYING      = svn:mime-type=text/plain
-INSTALL      = svn:mime-type=text/plain
-Makefile*    = svn:mime-type=text/plain
-README       = svn:mime-type=text/plain
-TODO         = svn:mime-type=text/plain
-
-# Code formats
-*.c          = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
-*.cpp        = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
-*.h          = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
-*.java       = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
-*.as         = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
-*.mxml       = svn:eol-style=native; svn:keywords=Id; svn:mime-type=text/plain
-
-# Webfonts
-*.eot        = svn:mime-type=application/vnd.ms-fontobject
-*.woff       = svn:mime-type=application/x-font-woff
-*.ttf        = svn:mime-type=application/x-font-truetype
-*.svg        = svn:mime-type=image/svg+xml</code>
-					<li>Save the changes you did. Allow up here first</li>
-				</ol>
+					</ol>
+				<h3>Settingup Template Work</h3>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
+						<li> Then click <strong class="buttonx">Edit HTML</strong></li>
+						<li>Scroll down and Find this Code :</li>
+						<code>&lt;meta content='FB_APP_ID' property='fb:app_id'/&gt;
+&lt;meta content='FB_ID' property='fb:admins'/&gt;</code>
+						<li>And also</li>
+						<code>&lt;div id='facebook-comment-appid' style='display:none'&gt;FB_APP_ID&lt;/div&gt;</code>
+						<li>Replace FB_APP_ID with your Facebook App ID and FB_ID with your Profile Numbric ID.</li>
+						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
+					</ol>
+			</div>	
+			<div id="disquscomment">
+				<h2>Disqus Comment Setup</h2>
+				<h3>Settingup Disqus Work</h3>
+					<ol>
+						<li>Create a free account on Disqus or login</li>
+						<li> Then <a href="https://disqus.com/admin/create/" class='newtab' target="_blank">click here</a> to add site</li>
+						<li> Now Enter Site Name and Disqus URL. (Your Disqus URL is Disqus Short Name)</li>
+						<li> Then Hit Finish registration Button</li>
+						<center><img src="./files/more/disqus.png" /></center>
+						<li>Done</li>
+					</ol>
+				<h3>Settingup Template Work</h3>
+					<ol>
+						<li>On Blogger Dashboard Click <strong class="template">Template</strong></li>
+						<li> Then click <strong class="buttonx">Edit HTML</strong></li>
+						<li>Scroll down and Find this Code :</li>
+						<code>&lt;div id='disqus-shortname' style='display:none'&gt;DISQUS_SHORT_NAME&lt;/div&gt;</code>
+						<li>Replace DISQUS_SHORT_NAME with your Disqus Short Name.</li>
+						<li>Atlast Click <strong class="buttonorg">Save Template</strong></li>
+					</ol>
 			</div>
-			<div id="upload2">
-				<h3>Creating a New Project Page</h3>
-				<ol>
-					<li>If you do not have a Google account, created first in order to get access to Google Code. Visit <a href="http://code.google.com/" target="_blank">http://code.google.com</a>, and then click <a href="https://code.google.com/hosting/createProject" target="_blank">Create A New Project</a>.</li>
-						<center><img src="./files/more/google-code_create-a-new-project.png"/></center>
-					<li>Fill out the form, adjust options version control system to Subversion, and select the license that you wish to upload files there:</li>
-						<center><img src="./files/more/google-code_filling-the-project-form.png"/></center>
-					<li>Click Create Project. You'll be taken to your new project dashboard page if it is successful. Click the Source tab and then click the link to create a password <a href="https://code.google.com/hosting/settings" target="_blank">googlecode.com password</a>. It is used to connect the application with your Google project.</li>
-						<center><img src="./files/more/google-code_generate-password.png"/></center>
-					<li>Record the password that appears:</li>
-						<center><img src="./files/more/google-code_generating-password.png"/></center>
-				</ol>
-			</div>
-			<div id="upload3">
-				<h3>Start Uploading</h3>
-				<ol>
-					<li>Open the TortoiseSVN application by right clicking on the desktop and select TortoiseSVN > Repo Browser:</li>
-						<center><img src="./files/more/tortoise-svn_repo-browser.png"/></center>
-					<li>Will display a dialog box to enter the URL of the project.</li>
-						<center><img src="./files/more/tortoise-svn_input-project-url-with-https.png"/></center>
-					<li>URL pattern is always shaped like this:</li>
-						<code>https://PROJECT_NAME.googlecode.com/svn/trunk/</code>
-						<p class="To be remembered and most often made ??failed in file upload: When writing the URL in the application project, using https, but when you want to see the results or access their work online, use the http"></p>
-						Click OK. Wait until the loading process is complete.<br/>
-						Open the folder where you want to upload the file there. Drag the file you want to upload the file list area:
-						<center><img src="./files/more/tortoise-svn_uploading.png"/></center>
-					<li>Wait a moment, you will be prompted to authenticate your Google account code like this:</li>
-						<center><img src="./files/more/tortoise-svn_authentication.png"/></center>
-					<li>Fill your email address and password that you've previously recorded. check the Save authentication so that we do not need to repeatedly log in when uploading files in the future.<br/>
-					If the file is successfully uploaded it will look like the following.</li>
-						<center><img src="./files/more/hasilupload.png"/></center>
-					<li>Click on the name of the file that has been uploaded (1)<br/>
-					Copy the link on the address bar (2) and then replace the main Javascript link of the theme</li>
-				</ol>
+			<div id="download">		
+				<h2>Download</h2>
+ 				<div class="plans">
+
+<div class="plan">
+<h2 class="plan-title">Fremium</h2>
+<p class="plan-price">$0</p>
+<p class="plan-features">
+Non-Removal Credits<br/>
+Public Database<br/>
+Default Heder Text<br/>
+Default Chat Limit<br/>
+Encyrpted Scripts
+<br/><br/><a href="#" class="plan-button">Download</a>
+</div>
+					
+<div class="plan plan-tall">
+<h2 class="plan-title">Premium</h2>
+<p class="plan-price">$29.9</p>
+<p class="plan-features">
+Removal Credits<br/>
+Your own Database<br/>
+Custom Header Text<br/>
+Custom Chat Limit<br/>
+Encyrpted Scripts
+<br/><br/><a href="#" class="plan-button">Purchase</a>
+</div>
+
+<div class="plan">
+<h2 class="plan-title">Ultra Pro</h2>
+<p class="plan-price">$55.5</p>
+<p class="plan-features">
+Removal Credits<br/>
+Your own Database<br/>
+Custom Header Text<br/>
+Custom Chat Limit<br/>
+Decyrpted Scripts
+<br/><br/><a href="#" class="plan-button">Purchase</a>
+</div>
+
+</div>
 			</div>
 			<div id="credits">
 				<h2>Credits</h2>
@@ -2190,24 +2139,19 @@ TODO         = svn:mime-type=text/plain
 					<li>HoverIntent r7 by Brian Chern brian(at)cherne(dot)net</li> 
 					<li>Antiscroll by Guillermo Rauch guillermo@learnboost.com</li>
 					<li><a href="http://helplogger.blogspot.in/">Many Scripts from Helplogger</a></li>
-
-
 				</ul>
 			</div>
 		
           </div>
-
-
 		<footer>
 			<div class="links">
-				<a href="http://punjabpresstemp.blogspot.in/" target="_blank">Check Demo</a>
-				<a href="./Punjab Press BT.zip">Download Free</a>
-				<a href="https://sellfy.com/p/vixZ/" target="_blank">Buy Full</a>
-				<a href="https://github.com/HSinghHira/PunjabPressBT/issues" target="_blank">Knowledgebase</a>
-				<a href="http://hsinghhira.blogspot.com/p/resume.html#contact" target="_blank">Contact us</a>
+				<a href="http://punjabpresstemp.blogspot.com/" target="_blank">View Theme Demo</a>
+				<a href="#download">Download Now</a>
+				<a href="https://github.com/HSinghHira/PunjabPressBT/issues" target="_blank">Discus Issues and Future</a>
+				<a href="http://hsinghhira.blogspot.com/p/profile.html#contact" target="_blank">Your Feedbacks</a>
 	
 			</div>
-			<p>Copyright &copy;2015 All Rights Reserved - Designed & Developed by <a href="http://hsinghhira.blogspot.com/" target="_blank">Harman Singh Hira</a> @ <a href="http://www.designdevta.blogspot.com/" target="_blank">Design Devta</a></p>
+			<p>&copy;<script>document.write(year)</script> - All Rights Reserved | Harman Singh Hira @ Design Devta</p>
 		</footer>
 		
 		<script src="./files/js/jquery-1.9.1.js"></script>
