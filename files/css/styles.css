@@ -371,7 +371,7 @@ a {
 }
 a:hover {
 	text-decoration: none;
-	color: #719430;
+	color: #f6701d;
 }
 .plan a:hover {
 	text-decoration: none;
@@ -462,7 +462,6 @@ a.sf-button {
     height: auto;
     padding: 14px 30px;
     margin: 0 10px 20px 0;
-    font-weight: bold;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
@@ -483,7 +482,7 @@ a.sf-button {
     background-clip: padding-box;
     vertical-align: middle;
     color: #ffffff;
-    background-color: ##719430;
+    background-color: #f6701d;
 }
 a.sf-button:hover {
     background-color: #252525;
@@ -563,7 +562,7 @@ h1, h2, h3, h4, h5, .custom-caption p, span.dropcap1, span.dropcap2, span.dropca
 	border-left: 1px solid #e4e4e4;
 }
 #docs-info .links a:hover, footer .links a:hover {
-	color: #719430;
+	color: #f6701d;
 }
 #docs-info a:first-child, footer a:first-child {
 	border-left: 0;
@@ -606,11 +605,11 @@ h1, h2, h3, h4, h5, .custom-caption p, span.dropcap1, span.dropcap2, span.dropca
 	font-weight: bold;
 }
 #docs-contents ul#tab-nav li.ui-state-active a {
-	background: #719430;
+	background: #f6701d;
 	color: #fff!important;
 }
 #docs-contents ul#tab-nav li a:hover {
-	color: #719430;
+	color: #f6701d;
 }
 #docs-contents > div {
 	width: 80%;
@@ -1423,7 +1422,7 @@ font-family:"Helvetica", Arial, sans-serif;
   text-transform: uppercase;
   text-decoration: none;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
-  background: #719430;
+  background: #f6701d;
 
 .plan-button:active {
   text-decoration: none;
